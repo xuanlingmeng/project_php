@@ -469,7 +469,7 @@
                                 </div>
 
                                 <div class="toolbar center">
-                                    <a href="LoginTest.html" data-target="#login-box" class="back-to-login-link">
+                                    <a href="LoginTest.php" data-target="#login-box" class="back-to-login-link">
                                         <i class="ace-icon fa fa-arrow-left"></i>
                                         返回登录
                                     </a>

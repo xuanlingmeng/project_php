@@ -454,14 +454,14 @@
 
                                 <div class="toolbar clearfix">
                                     <div>
-                                        <a href="ForgetPassword.html"  class="forgot-password-link">
+                                        <a href="ForgetPassword.php"  class="forgot-password-link">
                                             <i class="ace-icon fa fa-arrow-left"></i>
                                             忘记密码
                                         </a>
                                     </div>
 
                                     <div>
-                                        <a href="Register.html"  class="user-signup-link">
+                                        <a href="Register.php"  class="user-signup-link">
                                             注册
                                             <i class="ace-icon fa fa-arrow-right"></i>
                                         </a>
