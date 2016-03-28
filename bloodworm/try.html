@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        function test(){
+            if (document.getElementById("userName").value.trim()=="")
+            {
+                alert("不对！");
+                document.getElementById("userName").value="";
+                document.getElementById("userName").focus();
+                return false;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<label for="userName">userName:</label> <input type="text" id="userName" onblur = "CheckUserName('userName')"/>
+password:<input type="text" id="password" />
+
+<!--<script type="text/javascript">
+    function CheckUserName(str)
+    {
+        var strReg="";
+        var r;
+        var strText= document.getElementById(str).value;
+        if(strText=="" || strText==null)
+        {
+            alert("用户名不能为空");
+            return;
+        }
+    }
+</script>-->
+<script type="text/javascript">
+    $(function () {
+        var t = $("#userName");
+        if (t.val() == "") {
+            t.focus();
+        }
+    });
+</script>
+
+</body>
+</html>

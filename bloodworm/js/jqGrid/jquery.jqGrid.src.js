@@ -5679,7 +5679,7 @@ var xmlJsonClass = {
 			op = $.extend(op,opts.colModel.formatoptions);
 		}
 		if(rowid === undefined || $.fmatter.isEmpty(rowid)) {return "";}
-		if(op.editformbutton){
+	if(op.editformbutton){
 			ocl = "id='jEditButton_"+rowid+"' onclick=jQuery.fn.fmatter.rowactions.call(this,'formedit'); onmouseover=jQuery(this).addClass('ui-state-hover'); onmouseout=jQuery(this).removeClass('ui-state-hover'); ";
 			str += "<div title='"+$.jgrid.nav.edittitle+"' style='float:left;cursor:pointer;' class='ui-pg-div ui-inline-edit' "+ocl+"><span class='ui-icon ui-icon-pencil'></span></div>";
 		} else if(op.editbutton){
@@ -5690,6 +5690,7 @@ var xmlJsonClass = {
 			ocl = "id='jDeleteButton_"+rowid+"' onclick=jQuery.fn.fmatter.rowactions.call(this,'del'); onmouseover=jQuery(this).addClass('ui-state-hover'); onmouseout=jQuery(this).removeClass('ui-state-hover'); ";
 			str += "<div title='"+$.jgrid.nav.deltitle+"' style='float:left;margin-left:5px;' class='ui-pg-div ui-inline-del' "+ocl+"><span class='ui-icon ui-icon-trash'></span></div>";
 		}
+
 		ocl = "id='jSaveButton_"+rowid+"' onclick=jQuery.fn.fmatter.rowactions.call(this,'save'); onmouseover=jQuery(this).addClass('ui-state-hover'); onmouseout=jQuery(this).removeClass('ui-state-hover'); ";
 		str += "<div title='"+$.jgrid.edit.bSubmit+"' style='float:left;display:none' class='ui-pg-div ui-inline-save' "+ocl+"><span class='ui-icon ui-icon-disk'></span></div>";
 		ocl = "id='jCancelButton_"+rowid+"' onclick=jQuery.fn.fmatter.rowactions.call(this,'cancel'); onmouseover=jQuery(this).addClass('ui-state-hover'); onmouseout=jQuery(this).removeClass('ui-state-hover'); ";
@@ -8883,6 +8884,8 @@ $.jgrid.extend({
 	},
 	navGrid : function (elem, o, pEdit,pAdd,pDel,pSearch, pView) {
 		o = $.extend({
+			new:true,
+			newicon:"ui-icon-pencil",
 			edit: true,
 			editicon: "ui-icon-pencil",
 			add: true,
@@ -8993,15 +8996,50 @@ $.jgrid.extend({
 					}).hover(onHoverIn, onHoverOut);
 					tbd = null;
 				}
+
+				if(o.new) {
+					tbd = $("<td class='ui-pg-button ui-corner-all'></td>");
+
+
+				}
+
 				if (o.edit) {
 					tbd = $("<td class='ui-pg-button ui-corner-all'></td>");
 					pEdit = pEdit || {};
 					$(tbd).append("<div class='ui-pg-div'><span class='ui-icon "+o.editicon+"'></span>"+o.edittext+"</div>");
 					$("tr",navtbl).append(tbd);
+
 					$(tbd,navtbl)
 					.attr({"title":o.edittitle || "",id: pEdit.id || "edit_"+elemids})
 					.click(function(){
+						/*var a="./homeTest.html";
+						$(this).wrap("<a href="+a+"></a>");*/
+
 						if (!$(this).hasClass('ui-state-disabled')) {
+							var sr = $t.p.selrow;
+							if (sr) {
+								if($.isFunction( o.editfunc ) ) {
+									o.editfunc.call($t, sr);
+								} else {
+									//鼠标选中后出发的事件，此处为跳转新页面
+									var a = "./taskcontent.html";
+									/*$("#grid-table tr[aria-selected=true]").wrap("<a href=" + a + "></a>");*/
+									$("#grid-table tr[aria-selected=true]").wrap("<a href=" + a + "></a>");
+									debugger;
+									/*$($t).jqGrid("viewGridRow",sr,pEdit);*/
+									}
+								} else {
+									alert("请选择一行任务修改!");
+									/*$.jgrid.viewModal("#"+alertIDs.themodal,{gbox:"#gbox_"+$.jgrid.jqID($t.p.id),jqm:true});
+									$("#jqg_alrt").focus();*/
+								}
+							}
+							return false;
+					}).hover(onHoverIn, onHoverOut);
+					tbd = null;
+
+
+						/*if (!$(this).hasClass('ui-state-disabled')) {
 							var sr = $t.p.selrow;
 							if (sr) {
 								if($.isFunction( o.editfunc ) ) {
@@ -9016,8 +9054,10 @@ $.jgrid.extend({
 						}
 						return false;
 					}).hover(onHoverIn, onHoverOut);
-					tbd = null;
+					tbd = null;*/
+
 				}
+
 				if (o.view) {
 					tbd = $("<td class='ui-pg-button ui-corner-all'></td>");
 					pView = pView || {};
@@ -9035,8 +9075,9 @@ $.jgrid.extend({
 									$($t).jqGrid("viewGridRow",sr,pView);
 								}
 							} else {
-								$.jgrid.viewModal("#"+alertIDs.themodal,{gbox:"#gbox_"+$.jgrid.jqID($t.p.id),jqm:true});
-								$("#jqg_alrt").focus();
+								alert("请选择一行任务查看!");
+								/*$.jgrid.viewModal("#"+alertIDs.themodal,{gbox:"#gbox_"+$.jgrid.jqID($t.p.id),jqm:true});
+								$("#jqg_alrt").focus();*/
 							}
 						}
 						return false;
@@ -9066,7 +9107,8 @@ $.jgrid.extend({
 									$($t).jqGrid("delGridRow",dr,pDel);
 								}
 							} else  {
-								$.jgrid.viewModal("#"+alertIDs.themodal,{gbox:"#gbox_"+$.jgrid.jqID($t.p.id),jqm:true});$("#jqg_alrt").focus();
+								/*$.jgrid.viewModal("#"+alertIDs.themodal,{gbox:"#gbox_"+$.jgrid.jqID($t.p.id),jqm:true});$("#jqg_alrt").focus();*/
+								alert("请选择一行任务删除！")
 							}
 						}
 						return false;
@@ -9730,6 +9772,8 @@ $.jgrid.extend({
 	},
 	inlineNav : function (elem, o) {
 		o = $.extend(true,{
+			new:true,
+			newicon:"ui-icon-pencil",
 			edit: true,
 			editicon: "ui-icon-pencil",
 			add: true,

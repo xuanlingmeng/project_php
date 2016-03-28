@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <style type="text/css">
-        body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+        body, html{width: 100%;height: 100%;margin:0;}
         #allmap {height:550px; width: 100%;}
         #control{width:100%;}
     </style>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ny4t7GOujQB9Ek9S86hOz1GG"></script>
     <title>血吸虫病防治系统</title>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
     <!-- bootstrap & fontawesome -->
     <link rel="stylesheet" href="./css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/font-awesome.css"/>
-
-    <!-- page specific plugin styles -->
 
     <!-- text fonts -->
     <link rel="stylesheet" href="./css/ace-fonts.css"/>
@@ -34,12 +33,8 @@
     <link rel="stylesheet" href="./css/ace-ie.css"/>
     <![endif]-->
 
-    <!-- inline styles related to this page -->
-
     <!-- ace settings handler -->
-    <script src="/js/ace-extra.js"></script>
-
-    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <script src="./js/ace-extra.js"></script>
 
     <!--[if lte IE 8]>
     <script src="./js/html5shiv.js"></script>
@@ -56,7 +51,7 @@
 
 <body class="no-skin">
 <!-- #section:basics/navbar.layout -->
-<div id="navbar" class="navbar navbar-default    navbar-collapse       h-navbar">
+<div id="navbar" class="navbar  navbar-default  navbar-collapse   h-navbar">
     <script type="text/javascript">
         try {
             ace.settings.check('navbar', 'fixed')
@@ -75,27 +70,6 @@
             </a>
 
             <!-- /section:basics/navbar.layout.brand -->
-
-            <!-- #section:basics/navbar.toggle --><!--登录人员显示(右上方）-->
-            <button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button"
-                    data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
-                <span class="sr-only">Toggle user menu</span>
-
-                <img src="/avatars/user.jpg" alt="Jason's Photo"/>
-            </button>
-
-            <button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse"
-                    data-target="#sidebar">
-                <span class="sr-only">Toggle sidebar</span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-            </button>
-
-            <!-- /section:basics/navbar.toggle -->
         </div>
 
         <!-- #section:basics/navbar.dropdown -->
@@ -203,7 +177,7 @@
                                             <ul class="dropdown-menu dropdown-navbar">
                                                 <li>
                                                     <a href="#">
-                                                        <img src="/avatars/avatar.png"
+                                                        <img src="./avatars/avatar.png"
                                                              class="msg-photo"
                                                              alt="Alex's Avatar"/>
 																<span class="msg-body">
@@ -222,7 +196,7 @@
 
                                                 <li>
                                                     <a href="#">
-                                                        <img src="/avatars/avatar3.png"
+                                                        <img src="./avatars/avatar3.png"
                                                              class="msg-photo"
                                                              alt="Susan's Avatar"/>
 																<span class="msg-body">
@@ -336,7 +310,7 @@
                         </li>
 
                         <li>
-                            <a href="profile.html">
+                            <a href="#">
                                 <i class="ace-icon fa fa-user"></i>
                                 个人中心
                             </a>
@@ -345,7 +319,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="LoginTest.html">
+                            <a href="LoginTest.php">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出登录
                             </a>
@@ -356,35 +330,6 @@
                 <!-- /section:basics/navbar.user_menu -->
             </ul>
         </div>
-
-        <!-- /section:basics/navbar.dropdown -->
-        <nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
-            <!-- #section:basics/navbar.nav -->
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">
-                        <i class="ace-icon fa fa-envelope"></i>
-                        消息
-                        <span class="badge badge-warning">5</span>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- /section:basics/navbar.nav -->
-
-            <!-- #section:basics/navbar.form -->
-            <form class="navbar-form navbar-left form-search" role="search">
-                <div class="form-group">
-                    <input type="text" placeholder="搜索"/>
-                </div>
-
-                <button type="button" class="btn btn-xs btn-info2">
-                    <i class="ace-icon fa fa-search icon-only bigger-110"></i>
-                </button>
-            </form>
-
-            <!-- /section:basics/navbar.form -->
-        </nav>
     </div>
     <!-- /.navbar-container -->
 </div>
@@ -399,7 +344,7 @@
     </script>
 
     <!-- #section:basics/sidebar.horizontal -->
-    <div id="sidebar" class="sidebar      h-sidebar                navbar-collapse collapse">
+    <div id="sidebar" class="sidebar h-sidebar navbar-collapse collapse">
         <script type="text/javascript">
             try {
                 ace.settings.check('sidebar', 'fixed')
@@ -466,7 +411,7 @@
                 <ul class="submenu">
 
                     <li class="hover">
-                        <a href="nowtask.html">
+                        <a href="nowtask.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             正在进行任务
                         </a>
@@ -475,7 +420,7 @@
                     </li>
 
                     <li class="hover">
-                        <a href="#">
+                        <a href="donetask.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             已完成任务
                         </a>
@@ -484,16 +429,7 @@
                     </li>
 
                     <li class="hover">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            待审核任务
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="hover">
-                        <a href="newtask.html">
+                        <a href="newtask.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             新建任务
                         </a>
@@ -515,7 +451,7 @@
                 <ul class="submenu">
 
                     <li class="hover">
-                        <a href="doingTask.html">
+                        <a href="historymsg.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             查螺历史录入信息
                         </a>
@@ -524,7 +460,7 @@
                     </li>
 
                     <li class="hover">
-                        <a href="nowsnail.html">
+                        <a href="nowsnailpass.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             现场查螺信息
                         </a>
@@ -533,7 +469,7 @@
                     </li>
 
                     <li class="hover">
-                        <a href="#">
+                        <a href="eliminatepass.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             灭螺信息
                         </a>
@@ -555,20 +491,30 @@
                 <ul class="submenu">
 
                     <li class="hover">
-                        <a href="#">
+                        <a href="PersonRegister.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            新建用户
+                            用户信息完善
                         </a>
 
                         <b class="arrow"></b>
                     </li>
+
+                    <li class="hover">
+                        <a href="persontable.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            人员列表
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
                 </ul>
             </li>
 
             <li class="hover">
                 <a href="#">
-                    <i class="menu-icon fa fa-list-alt"></i>
-                    <span class="menu-text"> 区域管理 </span>
+                    <i class="menu-icon fa fa-file-o"></i>
+                    <span class="menu-text"> 疫区列表 </span>
                 </a>
 
                 <b class="arrow"></b>
@@ -577,7 +523,7 @@
                     <li class="hover">
                         <a href="#">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            多边形围栏
+                            江苏省
                         </a>
 
                         <b class="arrow"></b>
@@ -586,7 +532,16 @@
                     <li class="hover">
                         <a href="#">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            中心点围栏
+                            浙江省
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="hover">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            上海市
                         </a>
 
                         <b class="arrow"></b>
@@ -603,12 +558,12 @@
 							<span class="menu-text">
 								指标体系
 
-                                <!-- #section:basics/sidebar.layout.badge -->
+								<!-- #section:basics/sidebar.layout.badge -->
 								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
 									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
 								</span>
 
-                                <!-- /section:basics/sidebar.layout.badge -->
+								<!-- /section:basics/sidebar.layout.badge -->
 							</span>
                 </a>
 
@@ -616,39 +571,26 @@
                 <ul class="submenu">
 
                     <li class="hover">
-                        <a href="#">
+                        <a href="is_lab.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            钉螺指标
+                            基本数据录入
                         </a>
 
                         <b class="arrow"></b>
                     </li>
 
                     <li class="hover">
-                        <a href="#">
+                        <a href="rate.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            感染因素
+                            综合风险指数查看
                         </a>
 
                         <b class="arrow"></b>
                     </li>
 
-                    <li class="hover">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            影响因素
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
                 </ul>
-
             </li>
-
         </ul>
-        <!-- /.nav-list -->
-
-        <!-- #section:basics/sidebar.layout.minimize -->
 
         <!-- /section:basics/sidebar.layout.minimize -->
         <script type="text/javascript">
@@ -668,276 +610,92 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <div class="hidden">
-                            <div id="sidebar2" class="sidebar responsive">
-                                <ul class="nav nav-list">
-                                    <li>
-                                        <a class="dropdown-toggle" href="#">
-                                            <i class="menu-icon fa fa-tag"></i>
-                                            <span class="menu-text"> 人员列表 </span>
+                        <!--<div class="hidden">
+                           <div id="sidebar2" class="sidebar responsive">
+                              <ul class="nav nav-list">
+                                   <li>
+                                       <a class="dropdown-toggle" href="#">
+                                           <i class="menu-icon fa fa-file-o"></i>
 
-                                            <b class="arrow fa fa-angle-down"></b>
-                                        </a>
+                                                   <span class="menu-text">
+                                                       疫区列表
+                                                   </span>
 
-                                        <b class="arrow"></b>
+                                           <b class="arrow fa fa-angle-down"></b>
+                                       </a>
 
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="#" class="dropdown-toggle">
-                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                    江苏省
-                                                    <b class="arrow fa fa-angle-down"></b>
-                                                </a>
+                                       <b class="arrow"></b>
 
-                                                <b class="arrow"></b>
+                                       <ul class="submenu">
+                                           <li>
+                                               <a href="#" class="dropdown-toggle">
+                                                   <i class="menu-icon fa fa-caret-right"></i>
+                                                   江苏省
+                                                   <b class="arrow fa fa-angle-down"></b>
+                                               </a>
 
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            南京市
-                                                        </a>
-                                                        <b class="arrow"></b>
-                                                    </li>
+                                               <b class="arrow"></b>
 
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            苏州市
-                                                        </a>
-                                                        <b class="arrow"></b>
-                                                    </li>
+                                               <ul class="submenu">
+                                                   <li>
+                                                       <a href="#">
+                                                           <i class="menu-icon fa fa-caret-right"></i>
+                                                           南京市
+                                                       </a>
+                                                       <b class="arrow"></b>
+                                                   </li>
 
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            无锡市
-                                                        </a>
-                                                        <b class="arrow"></b>
-                                                    </li>
+                                                   <li>
+                                                       <a href="#">
+                                                           <i class="menu-icon fa fa-caret-right"></i>
+                                                           苏州市
+                                                       </a>
+                                                       <b class="arrow"></b>
+                                                   </li>
 
-                                                    <li>
-                                                        <a href="#" class="dropdown-toggle">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            常州市
-                                                            <b class="arrow fa fa-angle-down"></b>
-                                                        </a>
-                                                        <b class="arrow"></b>
+                                                   <li>
+                                                       <a href="#">
+                                                           <i class="menu-icon fa fa-caret-right"></i>
+                                                           无锡市
+                                                       </a>
+                                                       <b class="arrow"></b>
+                                                   </li>
 
-                                                        <ul class="submenu">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    杨争辉
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
+                                                   <li>
+                                                       <a href="#" class="dropdown-toggle">
+                                                           <i class="menu-icon fa fa-caret-right"></i>
+                                                           常州市
+                                                       </a>
+                                                       <b class="arrow"></b>
 
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    匡琳琳
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
+                                                   </li>
+                                               </ul>
+                                           </li>
 
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    崔洪博
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
+                                           <li>
+                                               <a href="#">
+                                                   <i class="menu-icon fa fa-caret-right"></i>
+                                                   浙江省
+                                               </a>
 
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    曾睿
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
+                                               <b class="arrow"></b>
+                                           </li>
 
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    陈超
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
+                                           <li>
+                                               <a href="#">
+                                                   <i class="menu-icon fa fa-caret-right"></i>
+                                                   上海市
+                                               </a>
 
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    刘浩波
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    王仁
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                    浙江省
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                    上海市
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a class="dropdown-toggle" href="#">
-                                            <i class="menu-icon fa fa-file-o"></i>
-
-													<span class="menu-text">
-                                                        疫区列表
-													</span>
-
-                                            <b class="arrow fa fa-angle-down"></b>
-                                        </a>
-
-                                        <b class="arrow"></b>
-
-                                        <ul class="submenu">
-                                            <li>
-                                                <a href="#" class="dropdown-toggle">
-                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                    江苏省
-                                                    <b class="arrow fa fa-angle-down"></b>
-                                                </a>
-
-                                                <b class="arrow"></b>
-
-                                                <ul class="submenu">
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            南京市
-                                                        </a>
-                                                        <b class="arrow"></b>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            苏州市
-                                                        </a>
-                                                        <b class="arrow"></b>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            无锡市
-                                                        </a>
-                                                        <b class="arrow"></b>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="#" class="dropdown-toggle">
-                                                            <i class="menu-icon fa fa-caret-right"></i>
-                                                            常州市
-                                                            <b class="arrow fa fa-angle-down"></b>
-                                                        </a>
-                                                        <b class="arrow"></b>
-
-                                                        <ul class="submenu">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    新北区
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    钟楼区
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    武进区
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    戚墅堰
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                                    天宁区
-                                                                </a>
-                                                                <b class="arrow"></b>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                    浙江省
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-caret-right"></i>
-                                                    上海市
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                               <b class="arrow"></b>
+                                           </li>
+                                       </ul>
+                                   </li>
+                               </ul>
                                 <!-- /.nav-list -->
-
-                                <div class="sidebar-toggle sidebar-collapse">
-                                    <i class="ace-icon fa fa-angle-double-left"
-                                       data-icon1="ace-icon fa fa-angle-double-left"
-                                       data-icon2="ace-icon fa fa-angle-double-right"></i>
-                                </div>
-                            </div>
-                            <!-- .sidebar -->
-                        </div>
+                        <!--</div>-->
+                        <!-- .sidebar -->
+                        <!--</div>-->
 
 
                         <div class="row">
@@ -945,13 +703,17 @@
                                 <!-- PAGE CONTENT BEGINS -->
                                 <form class="form-horizontal" role="form">
                                     <!-- #section:elements.form -->
+
                                     <div id="allmap"></div>
                                     <script type="text/javascript">
+
+
                                         // 百度地图API功能
                                         var map = new BMap.Map("allmap");
                                         map.centerAndZoom(new BMap.Point(119.980569,31.816918), 14);
                                         map.enableScrollWheelZoom(true);
                                         map.enableInertialDragging();
+
 
                                         //城市列表控件
                                         map.enableContinuousZoom();
@@ -968,12 +730,14 @@
                                             //   alert('after');
                                             // }
                                         }));
-                                        /*鼠标点击后获取坐标
-                                         function showInfo(e){
+
+                                        <!--定位控件-->
+                                        /*function showInfo(e){
                                          alert(e.point.lng + ", " + e.point.lat);
                                          }
-                                         map.addEventListener("click", showInfo);
-                                         */
+
+                                         map.addEventListener("click", showInfo);*/
+
 
                                         var navigationControl = new BMap.NavigationControl({
                                             // 靠左上角位置
@@ -983,6 +747,7 @@
                                             // 启用显示定位
                                             enableGeolocation: true
                                         });
+
                                         map.addControl(navigationControl);
                                         // 添加定位控件
                                         var geolocationControl = new BMap.GeolocationControl();
@@ -1002,13 +767,8 @@
                                         });
                                         map.addControl(geolocationControl);
 
-
-
-
-
                                         //显示围栏区域
-
-                                        var polygon = new BMap.Polygon([
+                                            var polygon = new BMap.Polygon([
                                             new BMap.Point(119.939175,31.84232),
                                             new BMap.Point(119.93127,31.823422),
                                             new BMap.Point(119.973958,31.832135),
@@ -1039,61 +799,68 @@
                                         map.addOverlay(circle);            //增加圆
                                         circle.addEventListener("click",overlay_style);
 
+                                      /*  var polygon = new BMap.Polygon([
+                                            new BMap.Point( 119.988151, 31.806362),
+                                            new BMap.Point(119.998319, 31.804828),
+                                            new BMap.Point(119.998463, 31.811579),
+                                           // new BMap.Point(120.00026,31.846369),
+                                          //  new BMap.Point(119.961884,31.842565)
+                                        ], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});  //创建多边形
+                                        map.addOverlay(polygon);   //增加多边形
+                                        polygon.addEventListener("click",overlay_style);*/
+
+
+
+
                                         function overlay_style(e){
                                             var p = e.target;
                                             if(p instanceof BMap.Marker){
-                                                alert("该覆盖物是点，点的坐标是：" + p.getPosition().lng + "," + p.getPosition().lat);
+                                                alert("该围栏是点，点的坐标是：" + p.getPosition().lng + "," + p.getPosition().lat);
                                             }else if(p instanceof BMap.Circle){
-                                                alert("该覆盖物是圆，圆的半径是：" + p.getRadius() + "，圆的中心点坐标是：" + p.getCenter().lng + "," + p.getCenter().lat);
+                                                alert("该围栏是圆，圆的半径是：" + p.getRadius() + "，圆的中心点坐标是：" + p.getCenter().lng + "," + p.getCenter().lat);
                                             }else if(p instanceof BMap.Polyline){
-                                                alert("该覆盖物是折线，所画点的个数是：" + p.getPath().length);
+                                                alert("该围栏是折线，所画点的个数是：" + p.getPath().length);
                                             }else if(p instanceof BMap.Polygon){
-                                                alert("该覆盖物是多边形，所画点的个数是：" + p.getPath().length);
+                                                alert("该围栏是多边形，所画点的个数是：" + p.getPath().length);
                                             }else if(p instanceof BMap.Polygon2){
-                                                alert("该覆盖物是多边形，所画点的个数是：" + p.getPath().length);
+                                                alert("该围栏是多边形，所画点的个数是：" + p.getPath().length);
                                             }else{
-                                                alert("无法获知该覆盖物类型");
+                                                alert("无法获知该围栏类型");
                                             }
                                         }
 
                                     </script>
 
-
                                 </form>
                             </div>
                         </div>
-
                     </div>
-                    <!-- /.main-content -->
+                    <!-- /.col -->
                     <!-- PAGE CONTENT ENDS -->
                 </div>
-                <!-- /.col -->
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
+            <!-- /.page-content -->
+        </div>
+        <!-- /.main-content inner -->
+    </div>
+    <!-- /.main-content -->
 
-            <div class="footer" >
-                <div class="footer-inner">
-                    <!-- #section:basics/footer -->
-                    <div class="footer-content">
+    <div class="footer" >
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content">
 						<span class="bigger-120">
 							<span class="blue bolder">血吸虫病</span>
 							防治系统 &copy; 2015-2016
 						</span>
-                    </div>
-                    <!-- /section:basics/footer -->
-                </div>
             </div>
-
+            <!-- /section:basics/footer -->
         </div>
-        <!-- /.page-content -->
     </div>
-</div>
-<!-- /.main-content -->
 
-<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-    <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-</a>
 </div>
+
 <!-- /.main-container -->
 <!-- basic scripts -->
 

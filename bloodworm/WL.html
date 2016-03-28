@@ -506,18 +506,9 @@
                     </li>
 
                     <li class="">
-                        <a href="#">
+                        <a href="donetask.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             已完成任务
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            待审核任务
                         </a>
 
                         <b class="arrow"></b>
@@ -547,7 +538,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="doingTask.html">
+                        <a href="historymsg.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                            查螺历史录入信息
                         </a>
@@ -556,7 +547,7 @@
                     </li>
 
                     <li class="">
-                        <a href="nowsnail.html">
+                        <a href="nowsnailpass.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             现场查螺信息
                         </a>
@@ -565,7 +556,7 @@
                     </li>
 
                     <li class="">
-                        <a href="#">
+                        <a href="eliminatepass.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             灭螺信息
                         </a>
@@ -587,23 +578,12 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="#" class="dropdown-toggle">
+                        <a href="PersonRegister.html">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            新建用户
-                            <b class="arrow fa fa-angle-down"></b>
+                            用户信息完善
                         </a>
 
                         <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li>
-                                <a href="PersonRegister.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    用户信息完善
-                                </a>
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
 
                     </li>
                 </ul>
@@ -827,7 +807,7 @@
                 </ul>
             </li>
 
-            <li class="active open">
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-file-o"></i>
 
@@ -1012,6 +992,7 @@
                 <div id="result">
                     <input type="button" value="获取绘制的覆盖物个数" onclick="alert(overlays.length)"/>
                     <input type="button" value="清除所有覆盖物" onclick="clearAll()"/>
+                    <button><a href="newtask.html" class="infobox-black">确认围栏</a></button>
                 </div>
                 <script type="text/javascript">
                     // 百度地图API功能
@@ -1037,12 +1018,11 @@
                         // }
                     }));
 
-                    /*鼠标点击后获取坐标
+
                     function showInfo(e){
-                        alert(e.point.lng + ", " + e.point.lat);
+                        alert(e.point.lng + ", " + e.point.lat); //显示坐标点
                     }
                     map.addEventListener("click", showInfo);
-                    */
 
 
                     var navigationControl = new BMap.NavigationControl({
@@ -1079,6 +1059,7 @@
                     var overlays = [];
                     var overlaycomplete = function(e){
                         overlays.push(e.overlay);
+                        alert(e.overlay); //显示添加的类型
                     };
                     var styleOptions = {
                         strokeColor:"red",    //边线颜色。
@@ -1134,10 +1115,6 @@
         </div>
     </div>
     <!-- /.main-content -->
-
-
-
-
 
     <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
         <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
     <title>血吸虫病防治系统-正在进行任务</title>
 
     <meta name="description" content="Dynamic tables and grids using jqGrid plugin" />
@@ -30,12 +31,8 @@
     <link rel="stylesheet" href="./css/ace-ie.css" />
     <![endif]-->
 
-    <!-- inline styles related to this page -->
-
     <!-- ace settings handler -->
     <script src="./js/ace-extra.js"></script>
-
-    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
     <!--[if lte IE 8]>
     <script src="./js/html5shiv.js"></script>
@@ -51,17 +48,6 @@
     </script>
 
     <div class="navbar-container" id="navbar-container">
-        <!-- #section:basics/sidebar.mobile.toggle -->
-        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-            <span class="sr-only">Toggle sidebar</span>
-
-            <span class="icon-bar"></span>
-
-            <span class="icon-bar"></span>
-
-            <span class="icon-bar"></span>
-        </button>
-
         <!-- /section:basics/sidebar.mobile.toggle -->
         <div class="navbar-header pull-left">
             <!-- #section:basics/navbar.layout.brand -->
@@ -73,28 +59,6 @@
             </a>
 
             <!-- /section:basics/navbar.layout.brand -->
-
-            <!-- #section:basics/navbar.toggle --><!--登录人员显示(右上方）-->
-            <button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button"
-                    data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
-                <span class="sr-only">Toggle user menu</span>
-
-                <img src="/avatars/user.jpg" alt="Jason's Photo"/>
-            </button>
-
-            <button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse"
-                    data-target="#sidebar">
-                <span class="sr-only">Toggle sidebar</span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-            </button>
-            <!-- #section:basics/navbar.toggle -->
-
-            <!-- /section:basics/navbar.toggle -->
         </div>
 
         <!-- #section:basics/navbar.dropdown -->
@@ -344,7 +308,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="LoginTest.html">
+                            <a href="LoginTest.php">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出登录
                             </a>
@@ -355,36 +319,6 @@
                 <!-- /section:basics/navbar.user_menu -->
             </ul>
         </div>
-
-        <!-- /section:basics/navbar.dropdown -->
-        <nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
-            <!-- #section:basics/navbar.nav -->
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">
-                        <i class="ace-icon fa fa-envelope"></i>
-                        消息
-                        <span class="badge badge-warning">5</span>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- /section:basics/navbar.nav -->
-
-            <!-- #section:basics/navbar.form -->
-            <form class="navbar-form navbar-left form-search" role="search">
-                <div class="form-group">
-                    <input type="text" placeholder="搜索"/>
-                </div>
-
-                <button type="button" class="btn btn-xs btn-info2">
-                    <i class="ace-icon fa fa-search icon-only bigger-110"></i>
-                </button>
-            </form>
-
-            <!-- /section:basics/navbar.form -->
-        </nav>
-
         <!-- /section:basics/navbar.dropdown -->
     </div><!-- /.navbar-container -->
 </div>
@@ -396,7 +330,7 @@
     </script>
 
     <!-- #section:basics/sidebar -->
-    <div id="sidebar" class="sidebar                  responsive">
+    <div id="sidebar" class="sidebar  responsive">
         <script type="text/javascript">
             try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
         </script>
@@ -436,7 +370,7 @@
 
         <ul class="nav nav-list">
             <li class="">
-                <a href="homeTest.html">
+                <a href="homeTest.php">
                     <i class="menu-icon fa fa-tachometer"></i>
                     <span class="menu-text"> 螺情监控 </span>
                 </a>
@@ -458,7 +392,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="nowtask.html">
+                        <a href="nowtask.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             正在进行任务
                         </a>
@@ -467,7 +401,7 @@
                     </li>
 
                     <li class="">
-                        <a href="#">
+                        <a href="donetask.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             已完成任务
                         </a>
@@ -476,16 +410,7 @@
                     </li>
 
                     <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            待审核任务
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="newtask.html">
+                        <a href="newtask.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             新建任务
                         </a>
@@ -508,7 +433,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="doingTask.html">
+                        <a href="historymsg.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             查螺历史录入信息
                         </a>
@@ -517,7 +442,7 @@
                     </li>
 
                     <li class="">
-                        <a href="nowsnail.html">
+                        <a href="nowsnailpass.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             现场查螺信息
                         </a>
@@ -526,7 +451,7 @@
                     </li>
 
                     <li class="">
-                        <a href="#">
+                        <a href="eliminatepass.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             灭螺信息
                         </a>
@@ -536,72 +461,6 @@
                 </ul>
             </li>
 
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-pencil-square-o"></i>
-                    <span class="menu-text"> 人员管理 </span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            新建用户
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li>
-                                <a href="PersonRegister.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    用户信息完善
-                                </a>
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-
-                    </li>
-                </ul>
-            </li>
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-list-alt"></i>
-                    <span class="menu-text"> 区域管理 </span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            多边形围栏
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            中心点围栏
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-
-
 
             <li class="">
                 <a href="#" class="dropdown-toggle">
@@ -609,12 +468,12 @@
 							<span class="menu-text">
 								指标体系
 
-                                <!-- #section:basics/sidebar.layout.badge -->
+								<!-- #section:basics/sidebar.layout.badge -->
 								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
 									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
 								</span>
 
-                                <!-- /section:basics/sidebar.layout.badge -->
+								<!-- /section:basics/sidebar.layout.badge -->
 							</span>
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
@@ -623,27 +482,18 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="#">
+                        <a href="is_lab.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            钉螺指标
+                            基本数据录入
                         </a>
 
                         <b class="arrow"></b>
                     </li>
 
                     <li class="">
-                        <a href="#">
+                        <a href="rate.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            感染因素
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            影响因素
+                            综合风险指数查看
                         </a>
 
                         <b class="arrow"></b>
@@ -656,7 +506,7 @@
             <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-tag"></i>
-                    <span class="menu-text">人员列表 </span>
+                    <span class="menu-text">人员管理 </span>
 
                     <b class="arrow fa fa-angle-down"></b>
                 </a>
@@ -665,126 +515,25 @@
 
                 <ul class="submenu">
                     <li>
-                        <a href="#" class="dropdown-toggle">
+                        <a href="PersonRegister.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            江苏省
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li>
-                                <a href="#">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    南京市
-                                </a>
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    苏州市
-                                </a>
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    无锡市
-                                </a>
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li>
-                                <a href="#" class="dropdown-toggle">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    常州市
-                                    <b class="arrow fa fa-angle-down"></b>
-                                </a>
-                                <b class="arrow"></b>
-
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            杨争辉
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            匡琳琳
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            崔洪博
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            曾睿
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            陈超
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            刘浩波
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            王仁
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            浙江省
+                            用户信息完善
                         </a>
 
                         <b class="arrow"></b>
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="persontable.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            上海市
+                            人员列表
+
                         </a>
 
                         <b class="arrow"></b>
+
                     </li>
+
                 </ul>
             </li>
 
@@ -795,10 +544,10 @@
 							<span class="menu-text">
 								疫区列表
 
-                                <!-- #section:basics/sidebar.layout.badge -->
+								<!-- #section:basics/sidebar.layout.badge -->
 								<span class="badge badge-primary">5</span>
 
-                                <!-- /section:basics/sidebar.layout.badge -->
+								<!-- /section:basics/sidebar.layout.badge -->
 							</span>
 
                     <b class="arrow fa fa-angle-down"></b>
@@ -845,51 +594,9 @@
                                 <a href="#" class="dropdown-toggle">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     常州市
-                                    <b class="arrow fa fa-angle-down"></b>
                                 </a>
                                 <b class="arrow"></b>
 
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            新北区
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            钟楼区
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            武进区
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            戚墅堰
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            天宁区
-                                        </a>
-                                        <b class="arrow"></b>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
 
@@ -939,7 +646,7 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="homeTest.html">主页</a>
+                        <a href="homeTest.php">主页</a>
                     </li>
 
                     <li>
@@ -948,15 +655,12 @@
                     <li class="active">正在进行任务</li>
                 </ul><!-- /.breadcrumb -->
 
-                <!-- #section:basics/content.searchbox -->
                 <div class="nav-search" id="nav-search">
-                    <form class="form-search">
-								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="ace-icon fa fa-search nav-search-icon"></i>
-								</span>
-                    </form>
-                </div><!-- /.nav-search -->
+                    <i class="widget-toolbar no-border invoice-info">
+                        <span class="invoice-info-label">Date:</span>
+                        <time class="invoice-info-label blue">09/12/2015</time>
+                    </i>
+                </div>
 
                 <!-- /section:basics/content.searchbox -->
             </div>
@@ -964,21 +668,6 @@
             <!-- /section:basics/content.breadcrumbs -->
             <div class="page-content">
                 <!-- /section:settings.box -->
-                <div class="page-header">
-                    <h1>
-                        正在进行任务
-                        <small>
-                            <i class="ace-icon fa fa-angle-double-right"></i>
-                            任务管理
-                        </small>
-
-                        <i class="widget-toolbar no-border invoice-info">
-                            <span class="invoice-info-label">日期:</span>
-                            <time class="invoice-info-label blue">09/12/2015</time>
-                        </i>
-                    </h1>
-                </div><!-- /.page-header -->
-
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
@@ -1011,10 +700,6 @@
             <!-- /section:basics/footer -->
         </div>
     </div>
-
-    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-    </a>
 </div><!-- /.main-container -->
 
 <!-- basic scripts -->
@@ -1069,29 +754,29 @@
     var grid_data =
         [
 
-            {id:"1",name:"联治滩",note:"查螺中",stock:"3211820001",ship:"M001", sdate:"2015-12-03"},
-            {id:"2",name:"华威滩",note:"灭螺完成",stock:"3211820002",ship:"P001",sdate:"2007-12-03"},
-            {id:"3",name:"新桥1号滩",note:"查螺中",stock:"3211820003",ship:"M002",sdate:"2007-12-03"},
-            {id:"4",name:"新桥2号滩",note:"查螺中",stock:"3211820004",ship:"P002",sdate:"2007-12-03"},
-            {id:"5",name:"立新1号滩",note:"灭螺完成",stock:"3211820005",ship:"P003",sdate:"2007-12-03"},
-            {id:"6",name:"立新2号滩",note:"灭螺中",stock:"3211820006", ship:"P004",sdate:"2007-12-03"},
-            {id:"7",name:"新江1号滩",note:"灭螺完成",stock:"3211820007",ship:"M003",sdate:"2007-12-03"},
-            {id:"8",name:"新江2号滩",note:"灭螺中",stock:"3211820008",ship:"P005",sdate:"2007-12-03"},
-            {id:"9",name:"新宁滩",note:"查螺中",stock:"3211820009", ship:"M004",sdate:"2007-12-03"},
-            {id:"10",name:"敦厚滩",note:"灭螺中",stock:"3211820010",ship:"P006", sdate:"2007-12-03"},
-            {id:"11",name:"丰乐1号滩",note:"灭螺完成",stock:"3211820011",ship:"M005",sdate:"2007-12-03"},
-            {id:"12",name:"丰乐2号滩",note:"查螺中",stock:"3211820012",ship:"M006",sdate:"2007-12-03"},
-            {id:"13",name:"向阳1号滩",note:"任务建立中",stock:"3211820013",ship:"P007",sdate:"2007-12-03"},
-            {id:"14",name:"向阳2号滩",note:"灭螺完成",stock:"3211820014",ship:"M007",sdate:"2007-12-03"},
-            {id:"15",name:"五一滩",note:"任务建立中",stock:"3211820015", ship:"P008",sdate:"2007-12-03"},
-            {id:"16",name:"营房滩",note:"查螺中",stock:"3211820016",ship:"P009",sdate:"2007-12-03"},
-            {id:"17",name:"朝阳滩",note:"查螺中",stock:"3211820017",ship:"P010",sdate:"2007-12-03"},
-            {id:"18",name:"永固滩",note:"任务建立中",stock:"3211820018", ship:"M008",sdate:"2007-12-03"},
-            {id:"19",name:"东风滩",note:"灭螺完成",stock:"3211820019", ship:"P011",sdate:"2007-12-03"},
-            {id:"20",name:"兴华滩",note:"任务建立中",stock:"3211820020",ship:"M009", sdate:"2007-12-03"},
-            {id:"21",name:"指南2号滩",note:"查螺中",stock:"3211820021",ship:"P012",sdate:"2007-12-03"},
-            {id:"22",name:"指南1号滩",note:"任务建立中",stock:"3211820022",ship:"M004",sdate:"2007-12-03"},
-            {id:"23",name:"锦程滩",note:"查螺中",stock:"3211820023",ship:"P013",sdate:"2007-12-03"}
+            {taskid:"1",name:"联治滩",state:"查螺中",hjid:"3211820001",person:"杨争辉", time:"2015-12-03",country:"扬中市新坝镇永平村",WL:"多边形"},
+            {taskid:"2",name:"华威滩",state:"灭螺完成",hjid:"3211820002",person:"崔洪博",time:"2007-12-03"},
+            {taskid:"3",name:"新桥1号滩",state:"查螺中",hjid:"3211820003",person:"陈超",time:"2007-12-03"},
+            {taskid:"4",name:"新桥2号滩",state:"查螺中",hjid:"3211820004",person:"曾睿",time:"2007-12-03"},
+            {taskid:"5",name:"立新1号滩",state:"灭螺完成",hjid:"3211820005",person:"P003",time:"2007-12-03"},
+            {taskid:"6",name:"立新2号滩",state:"灭螺中",hjid:"3211820006", person:"P004",time:"2007-12-03"},
+            {taskid:"7",name:"新江1号滩",state:"灭螺完成",hjid:"3211820007",person:"M003",time:"2007-12-03"},
+            {taskid:"8",name:"新江2号滩",state:"灭螺中",hjid:"3211820008",person:"P005",time:"2007-12-03"},
+            {taskid:"9",name:"新宁滩",state:"查螺中",hjid:"3211820009", person:"M004",time:"2007-12-03"},
+            {taskid:"10",name:"敦厚滩",state:"灭螺中",hjid:"3211820010",person:"P006", time:"2007-12-03"},
+            {taskid:"11",name:"丰乐1号滩",state:"灭螺完成",hjid:"3211820011",person:"M005",time:"2007-12-03"},
+            {taskid:"12",name:"丰乐2号滩",state:"查螺中",hjid:"3211820012",person:"M006",time:"2007-12-03"},
+            {taskid:"13",name:"向阳1号滩",state:"任务建立中",hjid:"3211820013",person:"P007",time:"2007-12-03"},
+            {taskid:"14",name:"向阳2号滩",state:"灭螺完成",hjid:"3211820014",person:"M007",time:"2007-12-03"},
+            {taskid:"15",name:"五一滩",state:"任务建立中",hjid:"3211820015", person:"P008",time:"2007-12-03"},
+            {taskid:"16",name:"营房滩",state:"查螺中",hjid:"3211820016",person:"P009",time:"2007-12-03"},
+            {taskid:"17",name:"朝阳滩",state:"查螺中",hjid:"3211820017",person:"P010",time:"2007-12-03"},
+            {taskid:"18",name:"永固滩",state:"任务建立中",hjid:"3211820018", person:"M008",time:"2007-12-03"},
+            {taskid:"19",name:"东风滩",state:"灭螺完成",hjid:"3211820019", person:"P011",time:"2007-12-03"},
+            {taskid:"20",name:"兴华滩",state:"任务建立中",hjid:"3211820020",person:"M009", time:"2007-12-03"},
+            {taskid:"21",name:"指南2号滩",state:"查螺中",hjid:"3211820021",person:"P012",time:"2007-12-03"},
+            {taskid:"22",name:"指南1号滩",state:"任务建立中",hjid:"3211820022",person:"M004",time:"2007-12-03"},
+            {taskid:"23",name:"锦程滩",state:"查螺中",hjid:"3211820023",person:"P013",time:"2007-12-03"}
         ];
 
 
@@ -1102,7 +787,7 @@
         //resize to fit page size
         $(window).on('resize.jqGrid', function () {
             $(grid_selector).jqGrid( 'setGridWidth', $(".page-content").width() );
-        })
+        });
         //resize on sidebar collapse/expand
 
         $(document).on('settings.ace.jqGrid' , function(ev, event_name, collapsed) {
@@ -1112,7 +797,7 @@
                     $(grid_selector).jqGrid( 'setGridWidth', parent_column.width() );
                 }, 0);
             }
-        })
+        });
 
         //if your grid is inside another element, for example a tab pane, you should use its parent's width:
         /**
@@ -1130,9 +815,6 @@
          */
 
 
-
-
-
         jQuery(grid_selector).jqGrid({
             //direction: "rtl",
 
@@ -1145,35 +827,38 @@
 
             subGridRowExpanded: function (subgridDivId, rowId) {
                 var subgridTableId = subgridDivId + "_t";
-                $("#" + subgridDivId).html("<table id='" + subgridTableId + "'></table>");
+                $("#" + subgridDivId).php("<table id='" + subgridTableId + "'></table>");
             },
 
 
             data: grid_data,
             datatype: "local",
-            height: 250,
-            colNames:[' ', '任务编号','更新时间','滩块名称', '滩块编号', '围栏编号','任务状态'],
+            height: 450,
+            colNames:[ '任务编号','环境编号','环境名称', '所属县、乡','围栏类型','建立时间', '负责人员','任务状态'],
             colModel:[
-                {name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
-                    formatter:'actions',
-                    formatoptions:{
-                        keys:true,
-                        //delbutton: false,//disable delete button
+                /*{name:'myac',index:'', width:0.01, fixed:true, sortable:true, resize:false,
+                 formatter:'actions',
+                 formatoptions:{
+                 keys:true,
+                 //delbutton: false,//disable delete button
 
-                        delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
-                        //editformbutton:true, editOptions:{recreateForm: true, beforeShowForm:beforeEditCallback}
-                    }
-                },
-                {name:'id',index:'id', width:60, sorttype:"int", editable: true},
-                {name:'sdate',index:'sdate',width:90, editable:true, sorttype:"date",unformat: pickDate},
-                {name:'name',index:'name', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
-                {name:'stock',index:'stock', width:60, sorttype:"int", editable: true},
-                {name:'ship',index:'ship', width:60, sorttype:"int", editable: true},
-                {name:'note',index:'note', width:150, editable: true,edittype:"select",editoptions:{value:"NT:任务建立中;ED:查螺中;EO:查螺完成;WD:灭螺中;WO:灭螺完成"}}
+                 delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
+                 //editformbutton:true, editOptions:{recreateForm: true, beforeShowForm:beforeEditCallback}
+                 }
+                 },*/
+                {name:'taskid',index:'taskid', width:40, sorttype:"int", editable: true},
+                {name:'hjid',index:'hjid', width:60, sorttype:"int", editable: true},
+                {name:'name',index:'name', width:70,editable: true,editoptions:{size:"20",maxlength:"30"}},
+                {name:'country',index:'country', width:150, sorttype:"varchar", editable: true},
+                {name:'WL',index:'WL', width:80, editable: true,edittype:"select",editoptions:{value:"M:多边形;O:中心点"}},
+                {name:'time',index:'time',width:70, editable:true, sorttype:"date",unformat: pickDate},
+                {name:'person',index:'person', width:70, sorttype:"int", editable: true},
+                {name:'state',index:'state', width:100, editable: true,edittype:"select",editoptions:{value:"EO:查螺完成;WO:灭螺完成"}},
+
             ],
 
             viewrecords : true,
-            rowNum:10,
+            rowNum:15,
             rowList:[10,20,30,40],
             pager : pager_selector,
             altRows: true,
@@ -1194,7 +879,7 @@
                 }, 0);
             },
 
-            editurl: "/dummy.html",//nothing is saved
+            editurl: "/dummy.php",//nothing is saved
             caption: "进行中任务管理表"
 
             //,autowidth: true,
@@ -1244,7 +929,7 @@
             { 	//navbar options
                 edit: true,
                 editicon : 'ace-icon fa fa-pencil blue',
-                add: true,
+                add: false,
                 addicon : 'ace-icon fa fa-plus-circle purple',
                 del: true,
                 delicon : 'ace-icon fa fa-trash-o red',
@@ -1307,7 +992,7 @@
                     style_search_filters($(this));
                 }
                 ,
-                multipleSearch: true,
+                multipleSearch: true
                 /**
                  multipleGroup:true,
                  showQuery: true
@@ -1452,17 +1137,5 @@
     });
 </script>
 
-<!-- the following scripts are used in demo only for onpage help and you don't need them -->
-<link rel="stylesheet" href="./css/ace.onpage-help.css" />
-<link rel="stylesheet" href="./js/sunburst.css" />
-
-<script type="text/javascript"> ace.vars['base'] = '..'; </script>
-<script src="./js/ace/elements.onpage-help.js"></script>
-<script src="./js/ace/ace.onpage-help.js"></script>
-<script src="./js/rainbow.js"></script>
-<script src="./js/generic.js"></script>
-<script src="./js/html.js"></script>
-<script src="./js/css.js"></script>
-<script src="./js/javascript.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
     <title>找回密码-血吸虫病防治系统</title>
 
 
@@ -285,7 +286,7 @@
                                         </li>
 
                                         <li class="dropdown-footer">
-                                            <a href="inbox.html">
+                                            <a href="inbox.php">
                                                 查看所有消息
                                                 <i class="ace-icon fa fa-arrow-right"></i>
                                             </a>
@@ -322,7 +323,7 @@
                         </li>
 
                         <li>
-                            <a href="profile.html">
+                            <a href="profile.php">
                                 <i class="ace-icon fa fa-user"></i>
                                 个人中心
                             </a>
@@ -405,11 +406,11 @@
                                     <div class="space-6"></div>
                                     <p> 请输入注册信息：</p>
 
-                                    <form>
+                                    <form role="form" method="POST" action="register_check.php">
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control"
+															<input type="text" class="form-control"  name="email"
                                                                    placeholder="电子邮箱"/>
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
@@ -417,7 +418,7 @@
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control"
+															<input type="text" class="form-control"  name="username"
                                                                    placeholder="用户名"/>
 															<i class="ace-icon fa fa-user"></i>
 														</span>
@@ -425,7 +426,7 @@
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control"
+															<input type="password" class="form-control"  name="password"
                                                                    placeholder="密码"/>
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
@@ -433,7 +434,7 @@
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control"
+															<input type="password" class="form-control"  name="password_confirm"
                                                                    placeholder="确认密码"/>
 															<i class="ace-icon fa fa-retweet"></i>
 														</span>
@@ -455,15 +456,19 @@
                                                     <span class="bigger-110">重置</span>
                                                 </button>
 
-                                                <button type="button"
-                                                        class="width-65 pull-right btn btn-sm btn-success ">
-                                                    <a href="#" class="back-to-login-link">
-                                                        <span class="bigger-110 ">注册</span>
-                                                    </a>
+                                                <!--   <button type="button"
+                                                           class="width-65 pull-right btn btn-sm btn-success ">
+                                                       <a href="#" class="back-to-login-link">
+                                                           <span class="bigger-110 ">注册</span>
+                                                       </a>
 
-                                                    <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-                                                </button>
+
+                                                   </button>
+                                             -->
+                                                <input type="submit" name="register" value="注册" style="font-size: 15px"
+                                                       class="width-65 pull-right btn btn-sm btn-success ">
                                             </div>
+
                                         </fieldset>
                                     </form>
                                 </div>
