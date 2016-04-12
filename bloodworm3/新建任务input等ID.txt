@@ -1,0 +1,8 @@
+任务编号id="haoma"    
+环境编号id="hjID"   
+是否需要查螺 需要id="need"   不需要id="noneed"  (bit 0,1)
+围栏类型  select name="wltype"
+圈定围栏  id="form-field"
+查/灭螺负责人员 id="form-field-9"
+任务紧急程度  select name="enmer"   （int1,2,3）
+任务建立时间  id="id-date-picker-1"

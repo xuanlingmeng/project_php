@@ -1,0 +1,49 @@
+
+获得的Json数据包是
+List<MapInfo> 这是一个类链表
+此处我是将所有tb_wlo_表中的记录 与 MapInfo 一一对应起来 然后以List的方式发送给客户端
+其中MapInfo这个类是由以下几项构成的
+int wlType; double Latitude; double Longitude; double TaskId; double Radius;
+
+前端实现思路
+这些是需要提前定义的，个人认为
+map
+preTaskId = 0;	// 这个是随意定义的
+preType = 0;
+MapPointArray = [];
+for(var i = 0; i < list.size(); i++)
+{
+
+	if(list.get(i).getWlType() == 1)		// 说明是多边形
+	{
+		if(list.get(i).getTaskId() == preTaskId || preType == 0)
+		{
+			// 	我看了下，画多边形函数其中一个是数组，数组的元素是 mapPoint = new BMap.Point(list.get(i).getLongitude(), list.get(i).getLatitude())
+			// 	可以事先创建一个数组，然后push 每个点
+			MapPointArray.push(mapPoint);
+			
+			preType = 1;
+			preTaskId = list.get(i).getTaskId();
+		}
+		else
+		{
+			var polygon = new BMap.Polygon(MapPointArray, ...);
+			map.addOverlay(polygon);
+			polygon.addOverlay();
+			preType = 0;
+		}
+		
+	}
+	else									// 否则是一个圆
+	{
+		// 获取 list.get(i).getLongitude()  list.get(i).getLatitude()    list.get(i).getRadius()
+		// draw a circle
+		preType = 0;
+	}
+}
+PS:
+1. map如果为全局的，是否就不会消失
+2. map.addOverlay(polygon);
+3. polygon 全局的和局部的有何差别，是否会影响函数的有效性
+
+

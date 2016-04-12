@@ -1,0 +1,79 @@
+灭螺表tb_e_eliminatesnail中的taskID是什么时候写进去的？就是需要verification验证的那个
+由谁写进去
+？？？
+
+day 2016-03-14
+螺情监控界面能够实现动态显示，根据新建任务中圈定的围栏，在螺情监控页面实现了动态显示
+测试通过代码如下
+$.ajax(
+    {
+		url: "/users/getMap",
+		type: "POST",
+		data: {mydata : smg},			//此处只是空
+		async: false,
+		success:function(data)
+		{
+
+		var preTaskId = 0;
+		var preType = 0;
+		var MapPointArray = [];
+		var mapPoint;
+		
+		for(var i = 0; i < data.length; i++)
+		{
+		  if(data[i].wlType == 1)		// 判断是否是围栏，围栏为 1
+		  {
+			if(data[i].taskId == preTaskId || preType == 0)		// 判断之前一个是否为圆或者是同一个围栏
+			{
+			  mapPoint = new BMap.Point(data[i].latitude, data[i].longitude);
+			  MapPointArray.push(mapPoint);
+			  preType = 1;
+			  preTaskId = data[i].taskId;
+
+			}
+			else			// 这个是新的围栏  
+			{
+			  // 最好这里加个判断，之前一个是否是圆还是围栏
+			  var m_polygon = new BMap.Polygon(MapPointArray, {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+			  map.addOverlay(m_polygon);
+			  m_polygon.addEventListener("click",overlay_style);
+			  
+			  preType = 0;
+			  preTaskId = data[i].taskId;
+			  mapPoint = new BMap.Point(data[i].latitude, data[i].longitude);
+			  MapPointArray = [];
+			  MapPointArray.push(mapPoint);
+			}
+		  }
+		  else							// 圆为 0
+		  {
+			if(preType == 1)
+			{
+			  var m_polygon = new BMap.Polygon(MapPointArray, {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+			  map.addOverlay(m_polygon);
+			  m_polygon.addEventListener("click",overlay_style);
+			}
+			MapPointArray = [];
+			var m_circle = new BMap.Circle(new BMap.Point(data[i].latitude,data[i].longitude), data[i].radius ,{strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+			map.addOverlay(m_circle);
+			m_circle.addEventListener("click",overlay_style);
+			preType = 0;
+			preTaskId = data[i].taskId;
+		  }
+		  if(i == (data.length - 1) && preType == 1)
+		  {
+			var m_polygon = new BMap.Polygon(MapPointArray, {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+			map.addOverlay(m_polygon);
+			m_polygon.addEventListener("click",overlay_style);
+		  }
+		}
+
+		alert("success");
+		},
+		error:function()
+		{
+		alert("fail")
+		}
+    }
+   );
+

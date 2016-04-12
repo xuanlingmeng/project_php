@@ -1,0 +1,2727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>血吸虫病防治系统</title>
+
+    <meta name="description" content="Static &amp; Dynamic Tables" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/font-awesome.css" />
+
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="./css/ace-fonts.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="./css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="./css/ace-part2.css" class="ace-main-stylesheet" />
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="./css/ace-ie.css" />
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="./js/ace-extra.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+    <script src="./js/html5shiv.js"></script>
+    <script src="./js/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="no-skin">
+<!-- #section:basics/navbar.layout -->
+<div id="navbar" class="navbar navbar-default">
+    <script type="text/javascript">
+        try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <!-- #section:basics/sidebar.mobile.toggle -->
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <!-- /section:basics/sidebar.mobile.toggle -->
+        <div class="navbar-header pull-left">
+            <!-- #section:basics/navbar.layout.brand -->
+            <a href="#" class="navbar-brand">
+                <small>
+                    <i class="fa fa-leaf"></i>
+                    血吸虫病防治系统
+                </small>
+            </a>
+
+            <!-- /section:basics/navbar.layout.brand -->
+
+            <!-- #section:basics/navbar.toggle -->
+
+            <!-- /section:basics/navbar.toggle -->
+        </div>
+
+        <!-- #section:basics/navbar.dropdown -->
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="transparent">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                    </a>
+
+                    <div class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <div class="tabbable">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#navbar-tasks">
+                                        任务
+                                        <span class="badge badge-danger">4</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a data-toggle="tab" href="#navbar-messages">
+                                        消息
+                                        <span class="badge badge-danger">5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- .nav-tabs -->
+                            <!--消息进度提醒-->
+                            <div class="tab-content">
+                                <div id="navbar-tasks" class="tab-pane in active">
+                                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu">
+                                        <li class="dropdown-content">
+                                            <ul class="dropdown-menu dropdown-navbar">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="clearfix">
+                                                            <span class="pull-left">灭螺任务1</span>
+                                                            <span class="pull-right">65%</span>
+                                                        </div>
+
+                                                        <div class="progress progress-mini">
+                                                            <div style="width:65%" class="progress-bar"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="clearfix">
+                                                            <span class="pull-left">灭螺任务2</span>
+                                                            <span class="pull-right">35%</span>
+                                                        </div>
+
+                                                        <div class="progress progress-mini">
+                                                            <div style="width:35%"
+                                                                 class="progress-bar progress-bar-danger"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="clearfix">
+                                                            <span class="pull-left">查螺任务1</span>
+                                                            <span class="pull-right">15%</span>
+                                                        </div>
+
+                                                        <div class="progress progress-mini">
+                                                            <div style="width:15%"
+                                                                 class="progress-bar progress-bar-warning"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="clearfix">
+                                                            <span class="pull-left">查螺任务2</span>
+                                                            <span class="pull-right">90%</span>
+                                                        </div>
+
+                                                        <div class="progress progress-mini progress-striped active">
+                                                            <div style="width:90%"
+                                                                 class="progress-bar progress-bar-success"></div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown-footer">
+                                            <a href="#">
+                                                查看任务详情
+                                                <i class="ace-icon fa fa-arrow-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.tab-pane -->
+
+                                <div id="navbar-messages" class="tab-pane">
+                                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu">
+                                        <li class="dropdown-content">
+                                            <ul class="dropdown-menu dropdown-navbar">
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="./avatars/avatar.png"
+                                                             class="msg-photo"
+                                                             alt="Alex's Avatar"/>
+																<span class="msg-body">
+																	<span class="msg-title">
+																		<span class="blue">叶老师:</span>
+                                                                        下午两点会议室开会
+																	</span>
+
+																	<span class="msg-time">
+																		<i class="ace-icon fa fa-clock-o"></i>
+																		<span>十分钟前</span>
+																	</span>
+																</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="./avatars/avatar3.png"
+                                                             class="msg-photo"
+                                                             alt="Susan's Avatar"/>
+																<span class="msg-body">
+																	<span class="msg-title">
+																		<span class="blue">大师姐:</span>
+                                                                        尽快汇报灭螺进展!
+																	</span>
+
+																	<span class="msg-time">
+																		<i class="ace-icon fa fa-clock-o"></i>
+																		<span>2天前</span>
+																	</span>
+																</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="./avatars/avatar4.png"
+                                                             class="msg-photo"
+                                                             alt="Bob's Avatar"/>
+																<span class="msg-body">
+																	<span class="msg-title">
+																		<span class="blue">小崔哥哥:</span>
+                                                                        狮子座今日运势佳!
+																	</span>
+
+																	<span class="msg-time">
+																		<i class="ace-icon fa fa-clock-o"></i>
+																		<span>下午 3:15</span>
+																	</span>
+																</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="./avatars/avatar2.png"
+                                                             class="msg-photo"
+                                                             alt="Kate's Avatar"/>
+																<span class="msg-body">
+																	<span class="msg-title">
+																		<span class="blue">女神:</span>
+                                                                        "港囧"很好看!推荐!
+																	</span>
+
+																	<span class="msg-time">
+																		<i class="ace-icon fa fa-clock-o"></i>
+																		<span>下午 10:33</span>
+																	</span>
+																</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="./avatars/avatar5.png"
+                                                             class="msg-photo"
+                                                             alt="Fred's Avatar"/>
+																<span class="msg-body">
+																	<span class="msg-title">
+																		<span class="blue">小灰:</span>
+                                                                        啥时候吃饭啊!
+																	</span>
+
+																	<span class="msg-time">
+																		<i class="ace-icon fa fa-clock-o"></i>
+																		<span>上午 10:09</span>
+																	</span>
+																</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown-footer">
+                                            <a href="#">
+                                                查看所有消息
+                                                <i class="ace-icon fa fa-arrow-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
+                        <!-- /.tabbable -->
+                    </div>
+                    <!-- /.dropdown-menu -->
+                </li>
+
+                <!-- #section:basics/navbar.user_menu -->
+                <li class="light-blue user-min">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="./avatars/user.jpg" alt="Jason's Photo"/>
+								<span class="user-info">
+									<small>欢迎,</small>
+                                    技术渣Howard
+								</span>
+
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="#">
+                                <i class="ace-icon fa fa-cog"></i>
+                                设置
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="ace-icon fa fa-user"></i>
+                                个人中心
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="LoginTest.html">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                退出登录
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- /section:basics/navbar.user_menu -->
+            </ul>
+        </div>
+
+        <nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
+            <!-- #section:basics/navbar.nav -->
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">
+                        <i class="ace-icon fa fa-envelope"></i>
+                        消息
+                        <span class="badge badge-warning">5</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- /section:basics/navbar.nav -->
+
+            <!-- #section:basics/navbar.form -->
+            <form class="navbar-form navbar-left form-search" role="search">
+                <div class="form-group">
+                    <input type="text" placeholder="搜索"/>
+                </div>
+
+                <button type="button" class="btn btn-xs btn-info2">
+                    <i class="ace-icon fa fa-search icon-only bigger-110"></i>
+                </button>
+            </form>
+
+            <!-- /section:basics/navbar.form -->
+        </nav>
+
+        <!-- /section:basics/navbar.dropdown -->
+    </div><!-- /.navbar-container -->
+</div>
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar                  responsive">
+        <script type="text/javascript">
+            try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+        </script>
+
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+            <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                <button class="btn btn-success">
+                    <i class="ace-icon fa fa-signal"></i>
+                </button>
+
+                <button class="btn btn-info">
+                    <i class="ace-icon fa fa-pencil"></i>
+                </button>
+
+                <!-- #section:basics/sidebar.layout.shortcuts -->
+                <button class="btn btn-warning">
+                    <i class="ace-icon fa fa-users"></i>
+                </button>
+
+                <button class="btn btn-danger">
+                    <i class="ace-icon fa fa-cogs"></i>
+                </button>
+
+                <!-- /section:basics/sidebar.layout.shortcuts -->
+            </div>
+
+            <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                <span class="btn btn-success"></span>
+
+                <span class="btn btn-info"></span>
+
+                <span class="btn btn-warning"></span>
+
+                <span class="btn btn-danger"></span>
+            </div>
+        </div><!-- /.sidebar-shortcuts -->
+
+        <ul class="nav nav-list">
+            <li class="">
+                <a href="homeTest.html">
+                    <i class="menu-icon fa fa-tachometer"></i>
+                    <span class="menu-text"> 螺情监控 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+							<span class="menu-text">
+								任务管理
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="nowtask.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            正在进行任务
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="donetask.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            已完成任务
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="newtask.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            新建任务
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-list"></i>
+                    <span class="menu-text"> 查灭螺信息管理 </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="historymsg.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            查螺历史录入信息
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="nowsnailpass.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            现场查螺信息
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="eliminatepass.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            灭螺信息
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-pencil-square-o"></i>
+                    <span class="menu-text"> 人员管理 </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="PersonRegister.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            用户信息完善
+                        </a>
+
+                        <b class="arrow"></b>
+
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-list-alt"></i>
+                    <span class="menu-text"> 区域管理 </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            多边形围栏
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            中心点围栏
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-calendar"></i>
+							<span class="menu-text">
+								指标体系
+
+                                <!-- #section:basics/sidebar.layout.badge -->
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+								</span>
+
+                                <!-- /section:basics/sidebar.layout.badge -->
+							</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="is_lab.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            基本数据录入
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="rate.html">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            综合风险指数查看
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+
+            </li>
+
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-tag"></i>
+                    <span class="menu-text">人员列表 </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li>
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            江苏省
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    南京市
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    苏州市
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    无锡市
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    常州市
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            杨争辉
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            匡琳琳
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            崔洪博
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            曾睿
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            陈超
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            刘浩波
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            王仁
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            浙江省
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            上海市
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-file-o"></i>
+
+							<span class="menu-text">
+								疫区列表
+
+                                <!-- #section:basics/sidebar.layout.badge -->
+								<span class="badge badge-primary">5</span>
+
+                                <!-- /section:basics/sidebar.layout.badge -->
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li>
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            江苏省
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    南京市
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    苏州市
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    无锡市
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    常州市
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <b class="arrow"></b>
+
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            新北区
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            钟楼区
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            武进区
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            戚墅堰
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            天宁区
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            浙江省
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            上海市
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+        </ul><!-- /.nav-list --><!-- #section:basics/sidebar.layout.minimize -->
+
+        <!-- #section:basics/sidebar.layout.minimize -->
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+
+        <!-- /section:basics/sidebar.layout.minimize -->
+        <script type="text/javascript">
+            try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+        </script>
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="homeTest.html">主页</a>
+                    </li>
+
+                    <li>
+                        <a href="#">任务管理</a>
+                    </li>
+                    <li class="active">已完成任务</li>
+                </ul><!-- /.breadcrumb -->
+
+                <!-- #section:basics/content.searchbox -->
+                <div class="nav-search" id="nav-search">
+                    <i class="widget-toolbar no-border invoice-info">
+                        <span class="invoice-info-label">Date:</span>
+                        <time class="invoice-info-label blue">09/12/2015</time>
+                    </i>
+                </div><!-- /.nav-search -->
+
+                <!-- /section:basics/content.searchbox -->
+            </div>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="table-header">
+                                    已完成任务管理列表
+                                </div>
+
+                                <!-- <div class="table-responsive"> -->
+
+                                <!-- <div class="dataTables_borderWrap"> -->
+                                <div>
+                                    <table id="sample-table-2" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </th>
+                                            <th>环境名称</th>
+                                            <th>环境编号</th>
+                                            <th class="hidden-480">围栏编号</th>
+
+                                            <th>
+                                                <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                                完成时间
+                                            </th>
+                                            <th class="hidden-480">任务负责人</th>
+
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="taskcontent.html">联治滩</a>
+                                            </td>
+                                            <td>3211820001</td>
+                                            <td class="hidden-480">M001</td>
+                                            <td>01/12/2015</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-warning">崔洪博</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="taskcontent.html">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">华威滩</a>
+                                            </td>
+                                            <td>3211820002</td>
+                                            <td class="hidden-480">M002</td>
+                                            <td>19/04/2015</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-success">曾睿</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">新桥1号滩</a>
+                                            </td>
+                                            <td>3211820003</td>
+                                            <td class="hidden-480">M003</td>
+                                            <td>07/08/2015</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-warning">崔洪博</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">新桥2号滩</a>
+                                            </td>
+                                            <td>3211820004</td>
+                                            <td class="hidden-480">M004</td>
+                                            <td>24/06/2015</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-inverse arrowed-in">陈超</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">立新1号滩</a>
+                                            </td>
+                                            <td>3211820005</td>
+                                            <td class="hidden-480">P001</td>
+                                            <td>21/04/2014</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-success">曾睿</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">立新2号滩</a>
+                                            </td>
+                                            <td>3211820006</td>
+                                            <td class="hidden-480">P002</td>
+                                            <td>14/06/2013</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-inverse arrowed-in">陈超</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">新江1号滩</a>
+                                            </td>
+                                            <td>3211820007</td>
+                                            <td class="hidden-480">M005</td>
+                                            <td>22/05/2003</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-info arrowed arrowed-righ">杨争辉</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">新江2号滩</a>
+                                            </td>
+                                            <td>3211820008</td>
+                                            <td class="hidden-480">P003</td>
+                                            <td>12/03/2012</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-success">曾睿</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">新宁滩</a>
+                                            </td>
+                                            <td>3211820009</td>
+                                            <td class="hidden-480">M006</td>
+                                            <td>12/02/2003</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-info arrowed arrowed-righ">杨争辉</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">敦厚滩</a>
+                                            </td>
+                                            <td>3211820010</td>
+                                            <td class="hidden-480">P004</td>
+                                            <td>01/04/2006</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-warning">崔洪博</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">丰乐1号滩</a>
+                                            </td>
+                                            <td>3211820011</td>
+                                            <td class="hidden-480">P004</td>
+                                            <td>02/02/2004</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-inverse arrowed-in">陈超</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">丰乐2号滩</a>
+                                            </td>
+                                            <td>3211820012</td>
+                                            <td class="hidden-480">M007</td>
+                                            <td>24/07/2008</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-success">曾睿</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">向阳1号滩</a>
+                                            </td>
+                                            <td>3211820013</td>
+                                            <td class="hidden-480">M008</td>
+                                            <td>01/04/2008</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-inverse arrowed-in">陈超</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">向阳2号滩</a>
+                                            </td>
+                                            <td>3211820014</td>
+                                            <td class="hidden-480">M009</td>
+                                            <td>01/05/2001</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-info arrowed arrowed-righ">杨争辉</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">五一滩</a>
+                                            </td>
+                                            <td>3211820015</td>
+                                            <td class="hidden-480">P005</td>
+                                            <td>12/03/2005</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-warning">崔洪博</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">营房滩</a>
+                                            </td>
+                                            <td>3211820016</td>
+                                            <td class="hidden-480">P006</td>
+                                            <td>11/06/2007</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-info arrowed arrowed-righ">杨争辉</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">朝阳滩</a>
+                                            </td>
+                                            <td>3211820017</td>
+                                            <td class="hidden-480">M010</td>
+                                            <td>26/09/2001</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-inverse arrowed-in">陈超</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">永固滩</a>
+                                            </td>
+                                            <td>3211820018</td>
+                                            <td class="hidden-480">P007</td>
+                                            <td>15/06/2003</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-warning">崔洪博</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">东风滩</a>
+                                            </td>
+                                            <td>3211820019</td>
+                                            <td class="hidden-480">M011</td>
+                                            <td>29/01/2005</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-info arrowed arrowed-righ">杨争辉</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">兴华滩</a>
+                                            </td>
+                                            <td>3211820020</td>
+                                            <td class="hidden-480">P008</td>
+                                            <td>17/06/2001</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-success">曾睿</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">指南2号滩</a>
+                                            </td>
+                                            <td>3211820021</td>
+                                            <td class="hidden-480">M012</td>
+                                            <td>19/06/2011</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-inverse arrowed-in">陈超</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">指南1号滩</a>
+                                            </td>
+                                            <td>3211820022</td>
+                                            <td class="hidden-480">M013</td>
+                                            <td>01/05/2003</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-warning">崔洪博</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="center">
+                                                <label class="position-relative">
+                                                    <input type="checkbox" class="ace" />
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
+
+                                            <td>
+                                                <a href="#">锦程滩</a>
+                                            </td>
+                                            <td>3211820023</td>
+                                            <td class="hidden-480">M014</td>
+                                            <td>04/11/2003</td>
+
+                                            <td class="hidden-480">
+                                                <span class="label label-sm label-info arrowed arrowed-righ">杨争辉</span>
+                                            </td>
+
+                                            <td>
+                                                <div class="hidden-sm hidden-xs action-buttons">
+                                                    <a class="blue" href="#">
+                                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="green" href="#">
+                                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                    </a>
+
+                                                    <a class="red" href="#">
+                                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                    </a>
+                                                </div>
+
+                                                <div class="hidden-md hidden-lg">
+                                                    <div class="inline position-relative">
+                                                        <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                            <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                        </button>
+
+                                                        <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                            <li>
+                                                                <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																				<span class="blue">
+																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
+																				</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+
+    <div class="footer">
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">血吸虫病</span>
+							防治系统 &copy; 2015-2016
+						</span>
+
+            </div>
+
+            <!-- /section:basics/footer -->
+        </div>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='./js/jquery.js'>"+"<"+"/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='../assets/js/jquery1x.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+    if('ontouchstart' in document.documentElement) document.write("<script src='./js/jquery.mobile.custom.js'>"+"<"+"/script>");
+</script>
+<script src="./js/bootstrap.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="./js/jquery.dataTables.js"></script>
+<script src="./js/jquery.dataTables.bootstrap.js"></script>
+
+<!-- ace scripts -->
+<script src="./js/ace/elements.scroller.js"></script>
+<script src="./js/ace/elements.colorpicker.js"></script>
+<script src="./js/ace/elements.fileinput.js"></script>
+<script src="./js/ace/elements.typeahead.js"></script>
+<script src="./js/ace/elements.wysiwyg.js"></script>
+<script src="./js/ace/elements.spinner.js"></script>
+<script src="./js/ace/elements.treeview.js"></script>
+<script src="./js/ace/elements.wizard.js"></script>
+<script src="./js/ace/elements.aside.js"></script>
+<script src="./js/ace/ace.js"></script>
+<script src="./js/ace/ace.ajax-content.js"></script>
+<script src="./js/ace/ace.touch-drag.js"></script>
+<script src="./js/ace/ace.sidebar.js"></script>
+<script src="./js/ace/ace.sidebar-scroll-1.js"></script>
+<script src="./js/ace/ace.submenu-hover.js"></script>
+<script src="./js/ace/ace.widget-box.js"></script>
+<script src="./js/ace/ace.settings.js"></script>
+<script src="./js/ace/ace.settings-rtl.js"></script>
+<script src="./js/ace/ace.settings-skin.js"></script>
+<script src="./js/ace/ace.widget-on-reload.js"></script>
+<script src="./js/ace/ace.searchbox-autocomplete.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function($) {
+        var oTable1 =
+                $('#sample-table-2')
+                //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+                        .dataTable( {
+                            bAutoWidth: false,
+                            "aoColumns": [
+                                { "bSortable": false },
+                                null, null,null, null, null,
+                                { "bSortable": false }
+                            ],
+                            "aaSorting": [],
+
+                            //,
+                            //"sScrollY": "200px",
+                            //"bPaginate": false,
+
+                            //"sScrollX": "100%",
+                            //"sScrollXInner": "120%",
+                            //"bScrollCollapse": true,
+                            //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
+                            //you may want to wrap the table inside a "div.dataTables_borderWrap" element
+
+                            //"iDisplayLength": 50
+                        } );
+        /**
+         var tableTools = new $.fn.dataTable.TableTools( oTable1, {
+					"sSwfPath": "../../copy_csv_xls_pdf.swf",
+			        "buttons": [
+			            "copy",
+			            "csv",
+			            "xls",
+						"pdf",
+			            "print"
+			        ]
+			    } );
+         $( tableTools.fnContainer() ).insertBefore('#sample-table-2');
+         */
+
+
+            //oTable1.fnAdjustColumnSizing();
+
+
+        $(document).on('click', 'th input:checkbox' , function(){
+            var that = this;
+            $(this).closest('table').find('tr > td:first-child input:checkbox')
+                    .each(function(){
+                        this.checked = that.checked;
+                        $(this).closest('tr').toggleClass('selected');
+                    });
+        });
+
+
+        $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('table')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            //var w2 = $source.width();
+
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            return 'left';
+        }
+
+    })
+</script>
+
+<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+<link rel="stylesheet" href="./css/ace.onpage-help.css" />
+<link rel="stylesheet" href="./js/sunburst.css" />
+
+<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+<script src="./js/ace/elements.onpage-help.js"></script>
+<script src="./js/ace/ace.onpage-help.js"></script>
+<script src="./js/rainbow.js"></script>
+<script src="./js/generic.js"></script>
+<script src="./js/html.js"></script>
+<script src="./js/css.js"></script>
+<script src="./js/javascript.js"></script>
+</body>
+</html>
