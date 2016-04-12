@@ -11,6 +11,7 @@
         #control{width:100%;}
     </style>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ny4t7GOujQB9Ek9S86hOz1GG"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>血吸虫病防治系统</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
@@ -706,8 +707,6 @@
 
                                     <div id="allmap"></div>
                                     <script type="text/javascript">
-
-
                                         // 百度地图API功能
                                         var map = new BMap.Map("allmap");
                                         map.centerAndZoom(new BMap.Point(119.980569,31.816918), 14);
@@ -767,48 +766,71 @@
                                         });
                                         map.addControl(geolocationControl);
 
-                                        //显示围栏区域
-                                            var polygon = new BMap.Polygon([
-                                            new BMap.Point(119.939175,31.84232),
-                                            new BMap.Point(119.93127,31.823422),
-                                            new BMap.Point(119.973958,31.832135),
-                                            new BMap.Point(120.00026,31.846369),
-                                            new BMap.Point(119.961884,31.842565)
-                                        ], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});  //创建多边形
-                                        map.addOverlay(polygon);   //增加多边形
-                                        polygon.addEventListener("click",overlay_style);
 
-                                        var polygon2 = new BMap.Polygon([
-                                            new BMap.Point(119.945212,31.811272),
-                                            new BMap.Point(119.943487,31.800225),
-                                            new BMap.Point(119.952686,31.803171),
-                                            new BMap.Point(119.951392,31.80538)
-                                        ], {strokeColor:"green", strokeWeight:6, strokeOpacity:0.5});  //创建多边形
-                                        map.addOverlay(polygon2);   //增加多边形
-                                        polygon2.addEventListener("click",overlay_style);
 
-                                        var polyline = new BMap.Polyline([
-                                            new BMap.Point(119.981,31.816795),
-                                            new BMap.Point(119.995948,31.833117),
-                                            new BMap.Point(120.011902,31.798261)
-                                        ], {strokeColor:"red", strokeWeight:6, strokeOpacity:0.5});   //创建折线
-                                        map.addOverlay(polyline);          //增加折线
-                                        polyline.addEventListener("click",overlay_style);
+                                        $.ajax(
+                                            {
+                                                url: "home_.php",
+                                                type: "POST",
+                                                dataType:'json',
+                                                //  data: {mydata : smg},
+                                                async: false,
+                                                success:function(data)
+                                                {
 
-                                        var circle = new BMap.Circle(new BMap.Point(119.904536,31.825386),500,{strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5}); //创建圆
-                                        map.addOverlay(circle);            //增加圆
-                                        circle.addEventListener("click",overlay_style);
+                                                    var MapPointArray = [];
+                                                    var mapPoint;
+                                                    var wltype="";
+                                                    // var la=array[];
+                                                    var radius="";
+                                                    var longitude="";
+                                                    var latitude="";
+                                                    var length="";
 
-                                      /*  var polygon = new BMap.Polygon([
-                                            new BMap.Point( 119.988151, 31.806362),
-                                            new BMap.Point(119.998319, 31.804828),
-                                            new BMap.Point(119.998463, 31.811579),
-                                           // new BMap.Point(120.00026,31.846369),
-                                          //  new BMap.Point(119.961884,31.842565)
-                                        ], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});  //创建多边形
-                                        map.addOverlay(polygon);   //增加多边形
-                                        polygon.addEventListener("click",overlay_style);*/
+                                                    wltype=data[0];
+                                                    longitude=data[1];
+                                                    latitude=data[2];
+                                                    length=data[3];
+                                                    radius=data[4];
+                                                    alert(longitude[0]);
+                                                    alert(latitude[0]) ;
+                                                    alert(radius);
+                                                    // alert(wltype);
+                                                    // alert(length);
+                                                    // alert(radius);
+                                                    if(wltype==1) {
+                                                        var polygon = [];
+                                                        for (var i = 0; i < length - 1; i++) {
+                                                            var x = longitude[i];
+                                                            var y = latitude[i];
+                                                            polygon[i] = new BMap.Point(x, y);
+                                                        }
+                                                        polygon = new BMap.Polygon(polygon, {
+                                                            strokeColor: "blue",
+                                                            strokeWeight: 3,
+                                                            strokeOpacity: 0.5
+                                                        })
+                                                        map.addOverlay(polygon);
+                                                    }
 
+                                                    else
+                                                    {
+                                                        //  var circle = new BMap.Circle(new BMap.Point(119.904536,31.825386),500,{strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5}); //创建圆
+                                                        //    map.addOverlay(circle);            //增加圆
+                                                        //  circle.addEventListener("click",overlay_style);
+
+                                                        var circle = new BMap.Circle(new BMap.Point(longitude[0],latitude[0]),radius,{strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5}); //创建圆
+                                                        map.addOverlay(circle);            //增加圆
+                                                        circle.addEventListener("click",overlay_style);
+                                                    }
+                                                    alert("success")
+                                                },
+                                                error:function()
+                                                {
+                                                    alert("fail")
+                                                }
+                                            }
+                                        );
 
 
 

@@ -61,13 +61,13 @@
     <!-- ace styles -->
     <link rel="stylesheet" href="./css/ace.css" class="ace-main-stylesheet" id="main-ace-style"/>
 
-    <!--   [if lte IE 9]>
+ <!--   [if lte IE 9]>
     <link rel="stylesheet" href="./css/ace-part2.css" class="ace-main-stylesheet"/>
     <![endif]
 
     [if lte IE 9]>
     <link rel="stylesheet" href="./css/ace-ie.css"/>
-    <!--[endif]-->
+    <![endif]-->
 
     <!-- ace settings handler -->
     <script src="./js/ace-extra.js"></script>
@@ -355,7 +355,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="LoginTest.php">
+                            <a href="LoginTest.html">
                                 <i class="ace-icon fa fa-power-off"></i>
                                 退出登录
                             </a>
@@ -418,7 +418,7 @@
 
         <ul class="nav nav-list">
             <li class="">
-                <a href="homeTest.php">
+                <a href="homeTest.html">
                     <i class="menu-icon fa fa-tachometer"></i>
                     <span class="menu-text"> 螺情监控 </span>
                 </a>
@@ -440,7 +440,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="nowtask.php">
+                        <a href="nowtask.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             正在进行任务
                         </a>
@@ -449,7 +449,7 @@
                     </li>
 
                     <li class="">
-                        <a href="donetask.php">
+                        <a href="donetask.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             已完成任务
                         </a>
@@ -458,7 +458,7 @@
                     </li>
 
                     <li class="">
-                        <a href="newtask.php">
+                        <a href="newtask.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             新建任务
                         </a>
@@ -481,16 +481,16 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="historymsg.php">
+                        <a href="historymsg.html">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            查螺历史录入信息
+                           查螺历史录入信息
                         </a>
 
                         <b class="arrow"></b>
                     </li>
 
                     <li class="">
-                        <a href="nowsnailpass.php">
+                        <a href="nowsnailpass.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             现场查螺信息
                         </a>
@@ -499,7 +499,7 @@
                     </li>
 
                     <li class="">
-                        <a href="eliminatepass.php">
+                        <a href="eliminatepass.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             灭螺信息
                         </a>
@@ -530,7 +530,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="is_lab.php">
+                        <a href="is_lab.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             基本数据录入
                         </a>
@@ -539,7 +539,7 @@
                     </li>
 
                     <li class="">
-                        <a href="rate.php">
+                        <a href="rate.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             综合风险指数查看
                         </a>
@@ -572,7 +572,7 @@
                     </li>-->
 
                     <li>
-                        <a href="persontable.php">
+                        <a href="persontable.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             人员列表
 
@@ -693,7 +693,7 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="homeTest.php">主页</a>
+                        <a href="homeTest.html">主页</a>
                     </li>
 
                     <li>
@@ -709,7 +709,7 @@
                 </div>
             </div>
 
-            <!-- /section:settings.box -->
+                <!-- /section:settings.box -->
 
             <div class="page-header">
                 <h1>
@@ -719,13 +719,13 @@
                         任务
                     </small>
 
-                </h1>
+                    </h1>
             </div><!-- /.page-header -->
 
             <div class="row">
                 <div class="col-xs-12">
                     <!-- PAGE CONTENT BEGINS -->
-                    <form class="form-horizontal" role="form" name="new" action="newtaskdeal.php" method="POST" >
+                    <form class="form-horizontal" role="form" name="new" >
                         <!-- #section:elements.form -->
                         <div class="form-group">
                             <label class="col-sm-3 control-label no-padding-right" for="haoma"> 任务编号 </label>
@@ -805,15 +805,10 @@
                                                                     <input type="button" value="清除所有覆盖物" onclick="clearAll()"/>
                                                                 </div>
                                                                 <script type="text/javascript">
-                                                                //引入javascript代码
                                                                     // 百度地图API功能
-
-                                                                //创建map实例
                                                                     var map = new BMap.Map('map');
                                                                     var poi = new BMap.Point(119.980569,31.816918);
                                                                     map.centerAndZoom(poi, 16);
-
-                                                                //添加鼠标滚动缩放
                                                                     map.enableScrollWheelZoom();
                                                                     map.enableInertialDragging();
 
@@ -841,12 +836,12 @@
                                                                         $("#form-field")[0].value += data + ' |';
 
                                                                     }
-                                                                    map.addEventListener("click", showInfo);//点击获取坐标
+                                                                    map.addEventListener("click", showInfo);
 
 
-                                                                    /*       $('#yes').click(function(){
-                                                                     $("#form-field").val(data.join('|'));
-                                                                     })*/
+                                                             /*       $('#yes').click(function(){
+                                                                        $("#form-field").val(data.join('|'));
+                                                                    })*/
 
                                                                     var navigationControl = new BMap.NavigationControl({
                                                                         // 靠左上角位置
@@ -911,9 +906,9 @@
                                                                     }
                                                                 </script>
 
-                                                                <!-- <script type="text/javascript">
-                                                                     alert(document.getElementById('form-field').innerHTML);
-                                                                 </script>-->
+                                                               <!-- <script type="text/javascript">
+                                                                    alert(document.getElementById('form-field').innerHTML);
+                                                                </script>-->
 
 
 
@@ -938,15 +933,10 @@
 
                         <div class="form-group">
                             <div class="col-sm-9">
-                                <button id="math" class="col-lg-offset-4" type="button">计算半径(m)</button>
+                                <button id="math" class="col-lg-offset-4" type="button">计算半径</button>
                                 <!--<input type="button" value="计算半径" id="math" class="col-lg-offset-4"/>-->
                                 <input type="text" id="circle"/>
-
-                                <button id="area" class="col-lg-push-1" type="button">计算面积(m²)</button>
-                                <input type="text" id="mianji"/>
                             </div>
-
-
 
                         </div>
 
@@ -992,14 +982,14 @@
                                                 <button type="button" class="btn btn-default" data-dismiss="modal" >关闭</button>
 
                                                 <script type="text/javascript">
-                                                    $("#save").click(function(){
-                                                        //$("#form-field-9").val($("#tree1").find(".tree-selected .tree-label").html());
-                                                        var item=[];
-                                                        $.each($("#tree1").find(".tree-selected .tree-label"),function(){
-                                                            item.push(this.innerHTML);
-                                                        });
-                                                        $("#form-field-9").val(item.join('、'));
-                                                    });
+                                                   $("#save").click(function(){
+                                                      //$("#form-field-9").val($("#tree1").find(".tree-selected .tree-label").html());
+                                                       var item=[];
+                                                       $.each($("#tree1").find(".tree-selected .tree-label"),function(){
+                                                           item.push(this.innerHTML);
+                                                       });
+                                                       $("#form-field-9").val(item.join('、'));
+                                                   });
 
                                                 </script>
                                             </div>
@@ -1026,7 +1016,7 @@
                                             'selectable' : true,
                                             'selected-icon' : 'ace-icon fa fa-check',
                                             'unselected-icon' : 'ace-icon fa fa-times',
-                                            loadingphp : '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>'
+                                            loadingHTML : '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>'
                                         });
 
 
@@ -1046,57 +1036,77 @@
                                                 'children' : {
                                                     'appliances' : {text: 'Appliances', type: 'item'},
                                                     'arts-crafts' : {text: 'Arts & Crafts', type: 'item'},
-                                                    'clothing' : {text: 'Clothing', type: 'item'}
+                                                    'clothing' : {text: 'Clothing', type: 'item'},
+                                                    'computers' : {text: 'Computers', type: 'item'},
+                                                    'jewelry' : {text: 'Jewelry', type: 'item'},
+                                                    'office-business' : {text: 'Office & Business', type: 'item'},
+                                                    'sports-fitness' : {text: 'Sports & Fitness', type: 'item'}
                                                 }
                                             };
                                             tree_data['zhejiang']['additionalParameters'] = {
                                                 'children' : {
                                                     'ningbo' : {text: '宁波市', type: 'folder'},
-                                                    'motorcycles' : {text: 'Motorcycles', type: 'item'}
+                                                    'motorcycles' : {text: 'Motorcycles', type: 'item'},
+                                                    'boats' : {text: 'Boats', type: 'item'}
                                                 }
                                             };
                                             tree_data['zhejiang']['additionalParameters']['children']['ningbo']['additionalParameters'] = {
                                                 'children' : {
                                                     'classics' : {text: 'Classics', type: 'item'},
-                                                    'convertibles' : {text: 'Convertibles', type: 'item'}
-
+                                                    'convertibles' : {text: 'Convertibles', type: 'item'},
+                                                    'coupes' : {text: 'Coupes', type: 'item'},
+                                                    'hatchbacks' : {text: 'Hatchbacks', type: 'item'},
+                                                    'hybrids' : {text: 'Hybrids', type: 'item'},
+                                                    'suvs' : {text: 'SUVs', type: 'item'},
+                                                    'sedans' : {text: 'Sedans', type: 'item'},
+                                                    'trucks' : {text: 'Trucks', type: 'item'}
                                                 }
                                             };
 
                                             tree_data['shanghai']['additionalParameters'] = {
                                                 'children' : {
                                                     'apartments-rentals' : {text: 'Apartments', type: 'item'},
-                                                    'office-space-rentals' : {text: 'Office Space', type: 'item'}
+                                                    'office-space-rentals' : {text: 'Office Space', type: 'item'},
+                                                    'vacation-rentals' : {text: 'Vacation Rentals', type: 'item'}
                                                 }
                                             };
                                             tree_data['hunan']['additionalParameters'] = {
                                                 'children' : {
                                                     'apartments' : {text: 'Apartments', type: 'item'},
-                                                    'villas' : {text: 'Villas', type: 'item'}
+                                                    'villas' : {text: 'Villas', type: 'item'},
+                                                    'plots' : {text: 'Plots', type: 'item'}
                                                 }
                                             };
                                             tree_data['hubei']['additionalParameters'] = {
                                                 'children' : {
                                                     'cats' : {text: 'Cats', type: 'item'},
-                                                    'dogs' : {text: 'Dogs', type: 'item'}
+                                                    'dogs' : {text: 'Dogs', type: 'item'},
+                                                    'horses' : {text: 'Horses', type: 'item'},
+                                                    'reptiles' : {text: 'Reptiles', type: 'item'}
                                                 }
                                             };
                                             tree_data['jiangxi']['additionalParameters'] = {
                                                 'children' : {
                                                     'cats' : {text: 'Cats', type: 'item'},
-                                                    'dogs' : {text: 'Dogs', type: 'item'}
+                                                    'dogs' : {text: 'Dogs', type: 'item'},
+                                                    'horses' : {text: 'Horses', type: 'item'},
+                                                    'reptiles' : {text: 'Reptiles', type: 'item'}
                                                 }
                                             };
                                             tree_data['anhui']['additionalParameters'] = {
                                                 'children' : {
                                                     'cats' : {text: 'Cats', type: 'item'},
-                                                    'dogs' : {text: 'Dogs', type: 'item'}
+                                                    'dogs' : {text: 'Dogs', type: 'item'},
+                                                    'horses' : {text: 'Horses', type: 'item'},
+                                                    'reptiles' : {text: 'Reptiles', type: 'item'}
                                                 }
                                             };
                                             tree_data['fujian']['additionalParameters'] = {
                                                 'children' : {
                                                     'cats' : {text: 'Cats', type: 'item'},
-                                                    'dogs' : {text: 'Dogs', type: 'item'}
+                                                    'dogs' : {text: 'Dogs', type: 'item'},
+                                                    'horses' : {text: 'Horses', type: 'item'},
+                                                    'reptiles' : {text: 'Reptiles', type: 'item'}
                                                 }
                                             };
 
@@ -1118,7 +1128,7 @@
 
                                                 //we have used static data here
                                                 //but you can retrieve your data dynamically from a server using ajax call
-                                                //checkout examples/treeview.php and examples/treeview.js for more info
+                                                //checkout examples/treeview.html and examples/treeview.js for more info
                                             };
 
 
@@ -1140,7 +1150,7 @@
 
                                                 //we have used static data here
                                                 //but you can retrieve your data dynamically from a server using ajax call
-                                                //checkout examples/treeview.php and examples/treeview.js for more info
+                                                //checkout examples/treeview.html and examples/treeview.js for more info
                                             };
 
 
@@ -1163,17 +1173,17 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label no-padding-right" > 任务建立时间 </label>
 
-                            <div class="col-sm-9">
-                                <input class="col-sm-3 date-picker" id="id-date-picker-1" name="id-date-picker-1" type="date" data-date-format="dd-mm-yyyy" />
-                                <div class="help-block col-xs-12 col-sm-reset inline red">*</div>
-                            </div>
-                        </div>
+                                    <div class="col-sm-9">
+                                        <input class="col-sm-3 date-picker" id="id-date-picker-1" name="id-date-picker-1" type="date" data-date-format="dd-mm-yyyy" />
+                                        <div class="help-block col-xs-12 col-sm-reset inline red">*</div>
+                                    </div>
+                                </div>
 
                         <div class="">
                             <div class="col-md-offset-3 col-md-9">
-                                <button class="btn btn-info" id="ok" type="submit">
+                                <button class="btn btn-info" id="ok" type="button">
                                     <i class="ace-icon fa fa-check bigger-110"></i>
-                                    <a href="historymsg.php">
+                                    <a href="historymsg.html">
                                         <span class="bigger-110 white">确认</span></a>
                                 </button>
 
@@ -1188,8 +1198,8 @@
 
                     </form>
                 </div>
-                <!-- /.page-content -->
-            </div>
+            <!-- /.page-content -->
+             </div>
             <!-- /.row -->
         </div>
         <!-- /.main-content-inner -->
@@ -1259,7 +1269,7 @@
 <script src="./js/ace/ace.searchbox-autocomplete.js"></script>
 
 
-inline scripts related to this page
+ inline scripts related to this page
 <script type="text/javascript">
     jQuery(function ($) {
         $('#sidebar2').insertBefore('.page-content').ace_sidebar('collapse', false);
@@ -1287,20 +1297,13 @@ inline scripts related to this page
     $("#math").click(function(){
         var pointarea=(document.getElementById('form-field').value);
         var pointa=pointarea.split("|");
+        var center=pointa[0].split(", ");
+        var radius=pointa[1].split(", ");
+        var R=6370996.81;
+        var pi=3.1415926535898;
+        var distance=R*Math.acos(Math.cos(center[1]*pi/180 )*Math.cos(radius[1]*pi/180)*Math.cos(center[0]*pi/180 -radius[0]*pi/180)+Math.sin(center[1]*pi/180 )*Math.sin(radius[1]*pi/180));
 
-
-        if (pointa.length == 3){
-            var center=pointa[0].split(", ");
-            var radius=pointa[1].split(", ");
-            var R=6370996.81;
-            var pi=3.1415926535898;
-            var distance=R*Math.acos(Math.cos(center[1]*pi/180 )*Math.cos(radius[1]*pi/180)*Math.cos(center[0]*pi/180 -radius[0]*pi/180)+Math.sin(center[1]*pi/180 )*Math.sin(radius[1]*pi/180));
-
-            $("#circle").val("R="+distance);}
-
-        else {
-            alert("围栏不为中心点围栏！不可计算半径！")
-        }
+        $("#circle").val("R="+distance);
 
         return false;
 
@@ -1309,129 +1312,6 @@ inline scripts related to this page
 //                                    console.log(distance);
     });
 </script>
-
-//围栏面积计算
-<script type="text/javascript">
-    //定义数学参数
-    var earthRadiusMeters=6371000.0;
-    var metersPerDegree=2.0*Math.PI*earthRadiusMeters/360.0;
-    var radiansPerDegree=Math.PI/180.0;
-    var degreesPerRadian=180.0/Math.PI;
-
-    function Bearing(from,to){
-        var lat1=from[1];
-        var lon1=from[0];
-        var lat2=to[1];
-        var lon2=to[0];
-        var angle=-Math.atan2(Math.sin(lon1-lon2)*Math.cos(lat2) , Math.cos(lat1)*Math.sin(lat2)-
-            Math.sin(lat1)*Math.cos(lat2)*Math.cos(lon1-lon2));
-        if (angle< 0.0) angle+=Math.PI*2.0;
-        angle=angle*degreesPerRadian;
-        return{
-            getValue:function(){
-                return angle;
-            }
-        };
-    }
-
-
-    function Angle(p1,p2,p3){
-        var bearing21=Bearing(p2,p1).getValue();
-        var bearing23=Bearing(p2,p3).getValue();
-        var angle=bearing21-bearing23;
-        if (angle<0.0) angle+=360.0;
-        return{
-            getValue:function(){
-                return angle;
-            }
-        };
-    }
-
-
-    function SphericalPolygonAreaMeters2(points){
-        var totalAngle=0;
-        for (var i=0;i < (points.length-1); ++i){
-            var j=(i+1)%(points.length-1);
-            var k=(i+2)%(points.length-1);
-            totalAngle +=Angle(points[i],points[j],points[k]).getValue();//返回一个角度
-        }
-
-        var planarTotalAngle=(points.length-3)*180.0;
-        var sphericalExcess=totalAngle-planarTotalAngle;
-
-        if (sphericalExcess>420.0){
-            totalAngle=(points.length-1)*360.0-totalAngle;
-            sphericalExcess=totalAngle-planarTotalAngle;
-        }
-        else if (sphericalExcess>300.0 && sphericalExcess<420.0){
-            sphericalExcess=Math.abs(360.0-sphericalExcess);
-        }
-        var M=sphericalExcess*radiansPerDegree*earthRadiusMeters*earthRadiusMeters;
-
-        return{
-            getValue:function(){
-                return M;
-            }
-        };
-    }
-
-
-
-    function PlanarPolygonAreaMeters2(pointa){
-        var a=0.0;
-        for (var i=0;i<(pointa.length-1);++i){
-            var j=(i+1)%(pointa.length-1);
-            var pointi=pointa[i].split(", ");//第i个坐标点
-            var pointj=pointa[j].split(", ");//第j个坐标点
-
-            var xi=pointi[0]*metersPerDegree*Math.cos(pointi[1]*radiansPerDegree);
-            var yi=pointi[1]*metersPerDegree;
-            var xj=pointj[0]*metersPerDegree*Math.cos(pointj[1]*radiansPerDegree);
-            var yj=pointj[1]*metersPerDegree;
-            a +=xi*yj-xj*yi;
-        }
-        var b=Math.abs(a/2.0);
-        return{
-            getValue:function(){
-                return b;
-            }
-        };
-    }
-
-    $("#area").click(function(){
-
-        var pointarea=(document.getElementById('form-field').value);
-        var pointa=pointarea.split("|");
-        debugger;
-        if (pointa.length > 3){
-            //多边形面积计算，运用三角形规则
-            var areaMeter2=PlanarPolygonAreaMeters2(pointa).getValue();
-            console.log(areaMeter2);
-            if (areaMeter2 > 1000000.0) areaMeter2=SphericalPolygonAreaMeters2(pointa).getValue();
-            $("#mianji").val(areaMeter2);
-
-        }
-        else if (pointa.length == 3){
-            //中心点面积计算
-            var center=pointa[0].split(", ");
-            var radius=pointa[1].split(", ");
-            var R=6370996.81;
-            var pi=3.1415926535898;
-            var distance=R*Math.acos(Math.cos(center[1]*pi/180 )*Math.cos(radius[1]*pi/180)*Math.cos(center[0]*pi/180 -radius[0]*pi/180)+Math.sin(center[1]*pi/180 )*Math.sin(radius[1]*pi/180));
-            var area=3.14*distance*distance;
-            $("#mianji").val(area);
-        }
-
-        return false;
-
-
-    })
-
-</script>
-
-
-
-
 
 <script type="text/javascript">
     $("#ok").click(function(){

@@ -737,7 +737,76 @@
                                         }
 
                                         map.addEventListener("click", showInfo);*/
+                                      /*   $.ajax(
+                                         {
+                                         url: "<%=path%>/users/getMap",
+                                         type: "POST",
+                                         data: {mydata : smg},
+                                         async: false,
+                                         success:function(data)
+                                         {
 
+                                         var preTaskId = 0;
+                                         var preType = 0;
+                                         var MapPointArray = [];
+                                         var mapPoint;
+                                         for(var i = 0; i < data.length; i++)
+                                         {
+                                         if(data[i].wlType == 1)
+                                         {
+                                         if(data[i].taskId == preTaskId || preType == 0)
+                                         {
+                                         mapPoint = new BMap.Point(data[i].latitude, data[i].longitude);
+                                         MapPointArray.push(mapPoint);
+                                         preType = 1;
+                                         preTaskId = data[i].taskId;
+
+                                         }
+                                         else
+                                         {
+                                         var m_polygon = new BMap.Polygon(MapPointArray, {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+                                         map.addOverlay(m_polygon);
+                                         m_polygon.addEventListener("click",overlay_style);
+                                         preType = 0;
+                                         preTaskId = data[i].taskId;
+                                         mapPoint = new BMap.Point(data[i].latitude, data[i].longitude);
+                                         MapPointArray = [];
+                                         MapPointArray.push(mapPoint);
+                                         }
+                                         }
+                                         else
+                                         {
+                                         if(preType == 1)
+                                         {
+                                         var m_polygon = new BMap.Polygon(MapPointArray, {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+                                         map.addOverlay(m_polygon);
+                                         m_polygon.addEventListener("click",overlay_style);
+                                         }
+                                         MapPointArray = [];
+                                         var m_circle = new BMap.Circle(new BMap.Point(data[i].latitude,data[i].longitude), data[i].radius ,{strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+                                         map.addOverlay(m_circle);
+                                         m_circle.addEventListener("click",overlay_style);
+                                         preType = 0;
+                                         preTaskId = data[i].taskId;
+                                         }
+                                         if(i == (data.length - 1) && preType == 1)
+                                         {
+                                         var m_polygon = new BMap.Polygon(MapPointArray, {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+                                         map.addOverlay(m_polygon);
+                                         m_polygon.addEventListener("click",overlay_style);
+                                         }
+                                         }
+
+
+
+                                         alert("success");
+                                         },
+                                         error:function()
+                                         {
+                                         alert("fail")
+                                         }
+                                         }
+                                         );*/
 
                                         var navigationControl = new BMap.NavigationControl({
                                             // 靠左上角位置
@@ -785,7 +854,7 @@
                                             new BMap.Point(119.951392,31.80538)
                                         ], {strokeColor:"green", strokeWeight:6, strokeOpacity:0.5});  //创建多边形
                                         map.addOverlay(polygon2);   //增加多边形
-                                        polygon2.addEventListener("click",overlay_style);
+                                        polygon.addEventListener("click",overlay_style);
 
                                         var polyline = new BMap.Polyline([
                                             new BMap.Point(119.981,31.816795),
