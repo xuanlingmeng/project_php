@@ -1,0 +1,119 @@
+●新建任务
+
+任务编号id="haoma"    
+环境编号id="hjID"   
+是否需要查螺 需要id="need"   不需要id="noneed"  (bit 0,1)
+围栏类型  select name="wltype"
+圈定围栏  id="form-field"
+查/灭螺负责人员 id="form-field-9"
+任务紧急程度  select name="enmer"   （int1,2,3）
+任务建立时间  id="id-date-picker-1"
+
+●历史信息
+?form name="sit"
+环境编号name="form-bs-1"	envirID
+环境名称name="form-bs-2"	envirName
+环境类型name="beachtype"	envirType
+所属县、乡（镇、街道）、村name="form-bs-3"	addressBel
+植被种类name="planttype"		planttype
+滩面高程(m)name="form-bs-4"		beachHeight
+历史最高水位(m)name="form-bs-5"		historyHeight
+滩面上水时间(月份)name="form-bs-6"	upStreamMonth
+滩面退水时间(月份)name="form-bs-7"	downStreamMonth
+水淹时间(天数)name="form-bs-8"		waterDay
+计name="form-td-1"			beachArea
+垦种name="form-td-2"			genzhong
+养殖name="form-td-3"			yangzhi
+植树name="form-td-4"			zhishu
+草滩name="form-td-5"			caotan
+芦滩name="form-td-6"			lutan
+
+?form name="change"
+吸淤填埋   年份select name="Year1"(value=0-9)  xiyuYear    面积name="form-ch-2"  xiyuArea    深度(m)name="form-ch-3"  xiyuDepth
+建厂占地   年份select name="Year2"(value=0-9)  jianchangYear    面积name="form-ch-5" jianchangArea
+港口/码头占地    年份select name="Year3"(value=0-90)  portYear    面积name="form-ch-7"  portArea
+其他项目占地     名称name="form-ch-8"  otherName     年份select name="Year4"(value=0-90)  otherYear    面积name="form-ch-10" otherArea
+
+?form name="his"
+首次有螺年份select name="Year5"(value=0-9) firstluoYear
+末次有螺年份select name="Year6"(value=0-9) lastluoYear
+有螺年数name="form-his-1" luoYears
+历史有螺面积name="form-his-2"	luoArea
+感染性钉螺面积name="form-his-3"	luoEffectedArea
+
+?form name="xg"
+有/无家畜放牧name="form-xg-radio1" （有value="1"   无value="0"）   hasLivestock
+家畜放牧种类name="xg1" LiveType
+有无渔船民活动name="form-xg-radio2"  （有value="1"   无value="0"）hasFisherAction
+发生急感年份select name="Year7"(value=0-90)	urgentYear
+发生急感人数name="xg2"	urgentPeople
+
+?form name="eli"
+药物灭螺    主要方法select name="eli-1"(value1-9) yaowuMethod    主要药物select name="eli-2"(value1-4) yaowuMedicine     灭螺面积name="eli-3"      yaowuArea
+环改        年份select name="Year8"(value=0-9)  huangaiYear   方法name="eli-4" huangaiMethod     面积name="eli-5" huangaiArea
+末次灭螺    年份select name="Year9"(value=0-9)  lastclearYear   方法name="eli-6" lastclearMethod    面积name="eli-7" lastclearArea
+
+
+●灭螺任务认证eliminatepass.html
+任务编号name="taskID"
+<此为验证项！在哪个表验证再议！>
+
+
+●灭螺信息
+?form  name="eliminate"
+任务起始日期name="datepicker1"
+任务终止日期name="datepicker2"
+任务完成次数name="times"
+灭螺方法name="method"   （value=1，2，3）(存于Method栏)
+工程实际支出费用(万元)name="money"
+长(m)name="long"
+宽(m)name="bread"
+面积(m2) name="area"
+土方(m2) name="areatu"
+石方(m3) name="areashi"
+滩面是否有护坡 name="wltype" （是value="1"   否value="0"）
+护坡长度(m)name="hupo"
+药物灭螺方法 select name="medway"  value=1-9   (存于Medicine_Method）
+药物名称 select name="medname"     value=1-4
+使用剂量 name="dose"
+环改灭螺方法 name="hg"
+硬化情况     长度(m)name="hlength"      面积(m2)name="harea"
+投入人工name="Manpower"
+其它改善项目name="others"
+
+●指标体系基本数据录入
+?form name="lab"
+§以下存于tb_is_sum中
+〓<注>tb_is_sum中有一个野粪总份数和野粪份数，这两个是一个东西，现只存在野粪总份数中（StoolSum）,另一个（StoolBox）不存任何数据。
+任务编号 name="taskID"
+感染螺数 name="infsnail"
+感染螺框数name="infbox"
+感染螺面积name="infarea"
+野粪总份数 name="stoolsum"（存于StoolSum中）
+野粪数 name = "stoolbox"
+野粪中检测出阳性毛蚴或血吸虫卵数 name="stoolsnail"
+
+§以下存于tb_is_infectionreason中
+急性感染select name="ainf" value=1-5
+疫水测定select name="deter"  value=1-5
+
+§以下存于tb_is_reason中
+人群活动select name="crowd"  value=1-5
+风险项目select name="risk"   value=1-5
+长江汛情select name="river"  value=1-5
+当地气温（℃）select name="temper"   value=1-4
+
+
+〓<注>连此界面时商讨先连哪个！因为有外键！
+
+
+
+
+
+
+
+
+
+
+
+
